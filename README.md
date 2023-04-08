@@ -8,7 +8,7 @@ No final do README tera um link capaz de direcionar você direto ao projeto feit
 
 🚀 Rodando/visualizando o projeto:
 <h4 align="center">Para rodar o repositório é necessário clonar o mesmo, e executar utilizando o live server. Tambem é possivel acessar o projeto pelo figma:
-<a href="https://www.figma.com/file/tamrlN8gfDMg5WGwQkp70Z/Projeto-layout?node-id=0%3A1&t=Fcsn67nROkJYzt6q-1">Projeto Figma</a>
+<a href="https://www.figma.com/community/file/1225987066017738772">Projeto Figma</a>
 </h4>
 
 🔜 Implementação futura:
