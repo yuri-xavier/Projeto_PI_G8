@@ -1,105 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Criadores</title>
-    <style>
-		table {
-			border-collapse: collapse;
-			width: 100%;
-			height: 100%;
-			padding: 0px;
-			margin: 0px;
-		}
-
-		td {
-			width: 50%;
-			height: 50%;
-			padding: 0px;
-			margin: 0px;
-			vertical-align: top;
-			text-align: center;
-		}
-
-		img {
-			display: block;
-			max-width: 100%;
-			height: auto;
-			margin: 0 auto;
-		}
-	</style>
-</head>
-<body>
-    <div class="background-overlay"></div>
-    <header>
-        <nav>
-            <a href="#" class="logo">Logo</a>
-            <ul class="nav-menu">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="#">Receita</a>
-                    <ul>
-                        <li><a href="receitas_massas.html">Receitas de massas</a></li>
-                        <li><a href="receitas_salgados.html">Receitas de Salgados</a></li>
-                        <li><a href="receitas_drink.html">Receitas de Drinks</a></li>
-                        <li><a href="receitas_doces.html">Receitas de Doces</a></li>
-                    </ul>
-                </li>
-                <li><a href="criadores.html">Cridores</a></li>
-                <i class='bx bx-search'></i>
-            </ul>
-            <!-- <div class="menu">
-                <span class="bar">/</span>
-                <span class="bar">/</span>
-                <span class="bar">/</span>
-            </div> -->
-        </nav>
-        
-    </header>
-<main>
-    <center>
-        <h2><em>Conheça os criadores por trás da CodeChef!</em></h2>
-    </center>
-	<table>
-		<tr>
-			<td>
-				<img src="img_criadores/Lais.png" width="200" height="200" alt="Fotografia do rosto de Laís Delfino, blusa branca, cabelos escuros longos e cacheados, olhos escuros.">
-				<h3>Laís Delfino</h3>
-				<p><a href="#">LinkedIn</a></p>
-                <p><a href="#">GitHub</a></p>
-                <p><a href="#">Gmail</a></p>
-			</td>
-			<td>
-				<img src="img_criadores/yuri.png" width="200" height="200" alt="Selfie de Yuri Alexsander segurando um celular, blusa de cor escura com estampa de folhas de palmeira. Cabelo castanho claro e olhos escuros">
-				<h3>Yuri Alexsander</h3>
-                <p><a href="#">LinkedIn</a></p>
-				<p><a href="#">GitHub</a></p>
-                <p><a href="#">Gmail</a></p>
-			</td>
-		</tr>
-		<tr>
-			<td>
-				<img src="img_criadores/Luiz.png" width="200" height="200" alt="Fotografia de Luiz Roberto usando blusa de mangas compridas na cor preta, segurando uma taça. Cabelo e olhos escuros">
-				<h3>Luiz Roberto</h3>
-                <p><a href="#">LinkedIn</a></p>
-                <p><a href="#">GitHub</a></p>
-				<p><a href="#">Gmail</a></p>
-			</td>
-			<td>
-				<img src="img_criadores/Luziane.png" width="200" height="200" alt="Fotografia do rosto de Luziane Costa, parda, cabelos e olhos castanho escuro">
-				<h3>Luziane Costa</h3>
-                <p><a href="#">LinkedIn</a></p>
-                <p><a href="#">GitHub</a></p>
-				<p><a href="#">Gmail</a></p>
-			</td>
-		</tr>
-	</table>
-    <p>Apaixonados por gastronomia e programação, e compartilhando da mesma visão: tornar a culinária acessível a todos, decidiram realizar um projeto integrativo que juntasse as duas paixões. 
-    Foi assim que surgiu a ideia de criar esta plataforma de receitas colaborativa, onde qualquer pessoa pode compartilhar suas receitas favoritas e se inspirar na criatividade de outros cozinheiros.</p> 
-    <p>Juntos, nós nos dedicamos a tornar a nossa página um espaço acolhedor e inspirador para todos os amantes da gastronomia
-    Esperamos que você se divirta navegando em nosso site e experimentando nossas receitas!</p>
-</main>
-</body>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+		<!-- <link rel="stylesheet" href="style.css"> -->
+		<title>Criadores</title>
+		
+	</head>
+	<body>
+		<div class="background-overlay"></div>
+		<header>
+			<nav class="navigation">
+				<a href="#" class="logo">Logo</a>
+				<ul class="nav-menu">
+					<li><a href="index.html">Home</a></li>
+					<li><a href="about.html">About</a></li>
+					<li><a href="#">Receita</a>
+						<ul>
+							<li><a href="receitas_massas.html">Receitas de massas</a></li>
+							<li><a href="receitas_salgados.html">Receitas de Salgados</a></li>
+							<li><a href="receitas_drink.html">Receitas de Drinks</a></li>
+							<li><a href="receitas_doces.html">Receitas de Doces</a></li>
+						</ul>
+					</li>
+					<li><a href="criadores.html">Criadores</a></li>
+					<i class='bx bx-search'></i>
+				</ul>
+				<!-- <div class="menu">
+					<span class="bar">/</span>
+					<span class="bar">/</span>
+					<span class="bar">/</span>
+				</div> -->
+			</nav>
+			
+		</header>
+	<main>
+		<section class="criadores">
+			<h2>Conheça os criadores por trás da CodeChef!</h2>
+			<div class="cards-conteiner">
+				<div class="card">
+					<div class="img-cri">
+						<img src="img_criadores/Lais.png" width="200" height="200" alt="Fotografia do rosto de Laís Delfino, blusa branca, cabelos escuros longos e cacheados, olhos escuros.">
+						<h3>Laís Delfino</h3>
+					</div>	
+					<div class="link">
+						<p><a href="#"><i class='bx bxl-linkedin' ></i></a></p>
+						<p><a href="#"><i class='bx bxl-github'></i></a></p>
+						<p><a href="#"><i class='bx bxl-gmail'></i></a></p>
+					</div>
+				</div>
+				<div class="card">		
+					<div class="img-cri">
+						<img src="img_criadores/yuri.png" width="200" height="200" alt="Selfie de Yuri Alexsander segurando um celular, blusa de cor escura com estampa de folhas de palmeira. Cabelo castanho claro e olhos escuros">					
+						<h3>Yuri Alexsander</h3>
+					</div>	
+					<div class="link">
+						<p><a href="https://www.linkedin.com/in/yuri-alexsander-bastos-xavier/"><i class='bx bxl-linkedin' ></i></a></p>
+						<p><a href="https://github.com/yuri-xavier"><i class='bx bxl-github'></i></a></p>
+						<p><a href="mailto:yurix@hotmail.com.br"><i class='bx bxl-gmail'></i></a></p>	
+					</div>
+				</div>	
+				<div class="card">		
+					<div class="img-cri">
+						<img src="img_criadores/Luiz.png" width="200" height="200" alt="Fotografia de Luiz Roberto usando blusa de mangas compridas na cor preta, segurando uma taça. Cabelo e olhos escuros">
+						<h3>Luiz Roberto</h3>
+					</div>
+					<div class="link">
+						<p><a href="#"><i class='bx bxl-linkedin' ></i></a></p>
+						<p><a href="#"><i class='bx bxl-github'></i></a></p>
+						<p><a href="#"><i class='bx bxl-gmail'></i></a></p>
+					</div>
+				</div>
+				<div class="card">
+					<div class="img-cri">
+						<img src="img_criadores/Luziane.png" width="200" height="200" alt="Fotografia do rosto de Luziane Costa, parda, cabelos e olhos castanho escuro">
+						<h3>Luziane Costa</h3>
+					</div>	
+					<div class="link">			
+						<p><a href="#"><i class='bx bxl-linkedin' ></i></a></p>
+						<p><a href="#"><i class='bx bxl-github'></i></a></p>
+						<p><a href="#"><i class='bx bxl-gmail'></i></a></p>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+	<footer class="rodape">
+		<P> Copyright 2022-2023 Equipe G8 Proz S.A.</P>
+	</footer>
+	</body>
 </html>
