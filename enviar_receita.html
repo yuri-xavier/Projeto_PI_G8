@@ -1,69 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Enviar_receita</title>
-</head>
-<body>
+  </head>
+  <body>
     <div class="background-overlay"></div>
     <header>
-        <nav>
-            <a href="#" class="logo">Logo</a>
-            <ul class="nav-menu">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="#">Receita</a>
-                    <ul>
-                        <li><a href="receitas_massas.html">Receitas de massas</a></li>
-                        <li><a href="receitas_salgados.html">Receitas de Salgados</a></li>
-                        <li><a href="receitas_drink.html">Receitas de Drinks</a></li>
-                        <li><a href="receitas_doces.html">Receitas de Doces</a></li>
-                    </ul>
-                </li>
-                <li><a href="criadores.html">Cridores</a></li>
-                <i class='bx bx-search'></i>
+      <nav>
+        <a href="#" class="logo">Logo</a>
+        <ul class="nav-menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li>
+            <a href="#">Receita</a>
+            <ul>
+              <li><a href="receitas_massas.html">Receitas de massas</a></li>
+              <li><a href="receitas_salgados.html">Receitas de Salgados</a></li>
+              <li><a href="receitas_drink.html">Receitas de Drinks</a></li>
+              <li><a href="receitas_doces.html">Receitas de Doces</a></li>
+              <li><a href="enviar_receita.html">Envie sua receita</a></li>
             </ul>
-            <!-- <div class="menu">
-                <span class="bar">/</span>
-                <span class="bar">/</span>
-                <span class="bar">/</span>
-            </div> -->
-        </nav>
+          </li>
+          <li><a href="criadores.html">Cridores</a></li>
+          <i class="bx bx-search"></i>
+        </ul>
+        <div class="menu">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+      </nav>
     </header>
     <main>
-        <section class="envio">
-            <h1>Envio de receita</h1>
-            <p>Você pode contribuir para o crescimento do nosso site compartilhando suas receitas favoritas. Faça parte da CodeChef!</p>
-            <form action="#" method="post">
-                <label for="titulo">Título:</label>
-                <input type="text" id="titulo" name="titulo" 
-        
-                <label for="descricao">Descrição:</label>
-                <textarea id="descricao" name="descricao" required></textarea><br>
-        
-                <label for="foto">Foto:</label>
-                <input type="file" id="foto" name="foto" required><br>
+      <section class="envio">
+        <h1>Envio de receita</h1>
+        <p>
+          Você pode contribuir para o crescimento do nosso site compartilhando
+          suas receitas favoritas. Faça parte da CodeChef!
+        </p>
+        <form action="#" method="post">
+          <label for="titulo">Título:</label>
+          <input type="text" id="titulo" name="titulo" />
 
-                <label for="autor">Autor:</label>
-                <input type="text" id="autor" name="autor" 
-        
-                <label for="categoria">Categoria:</label>
-                <select id="categoria" name="categoria" required>
-                    <option value="">Selecione</option>
-                    <option value="massa">Massa</option>
-                    <option value="salgado">Salgado</option>
-                    <option value="doce">Doce</option>
-                    <option value="bebida">Bebida</option>
-                </select><br>
-        
-                <input type="submit" value="Enviar">
-            
-        </section>
+          <label for="descricao">Descrição:</label>
+          <textarea id="descricao" name="descricao" required></textarea><br />
+
+          <label for="foto">Foto:</label>
+          <input type="file" id="foto" name="foto" required /><br />
+
+          <label for="autor">Autor:</label>
+          <input type="text" id="autor" name="autor" />
+
+          <label for="categoria">Categoria:</label>
+          <select id="categoria" name="categoria" required>
+            <option value="">Selecione</option>
+            <option value="massa">Massa</option>
+            <option value="salgado">Salgado</option>
+            <option value="doce">Doce</option>
+            <option value="bebida">Bebida</option></select
+          ><br />
+
+          <input type="submit" value="Enviar" />
+        </form>
+      </section>
     </main>
-</body>
-<footer>
-    <P> Copyright 2022-2023 Equipe G8 Proz S.A.</P>
-</footer>
+  </body>
+  <footer>
+    <p>Copyright 2022-2023 Equipe G8 Proz S.A.</p>
+  </footer>
 </html>
