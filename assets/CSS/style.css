@@ -1,0 +1,129 @@
+* {
+  padding: 0%;
+  margin: 0%;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.navigation {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 40px;
+  background-color: black;
+  color: white;
+  box-shadow: 0 0.1rem 0.5rem #f6f3f3;
+}
+.navigation a {
+  color: #f6f3f3;
+}
+.navigation img {
+  color: var(--cor-primaria);
+  width: 4.5rem;
+  cursor: pointer;
+}
+
+.navigation ul {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  list-style-type: none;
+  padding: 0;
+}
+.navigation ul li {
+  display: inline;
+  position: relative;
+}
+.navigation ul li a {
+  display: inline-block;
+  color: var(--cor-primaria);
+  text-decoration: none;
+  padding: 10px;
+  transition: background 0.5s;
+}
+.navigation ul li a:hover {
+  color: var(--cor-hover);
+}
+/* Sub menu */
+.navigation ul ul {
+  display: none;
+  position: absolute;
+  width: 160px;
+  background-color: #000000;
+}
+
+.navigation ul li:hover ul {
+  display: block;
+}
+
+.navigation ul ul li a {
+  display: block;
+}
+/* Criadores */
+.card-wrapper {
+  width: 100%;
+  height: 90%;
+  display: flex;
+  flex-wrap: wrap-reverse;
+  align-items: center;
+}
+.card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  width: 50%;
+  height: 200px;
+  overflow: hidden;
+}
+.card i {
+  font-size: 30px;
+  margin-left: 10px;
+  color: #000000;
+}
+.card i:hover {
+  color: #ff0202;
+}
+.img-cri img {
+  width: 172px;
+  height: 150px;
+  object-fit: cover;
+}
+
+@media (max-width: 785px) {
+  .navigation {
+    padding: 18px 20px;
+  }
+  .menu {
+    display: block;
+  }
+  .menu.ativo .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  .menu.ativo .bar:nth-child(2) {
+    opacity: 0;
+  }
+  .menu.ativo .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+  .nav-menu {
+    position: fixed;
+    right: -100%;
+    top: 70px;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    flex-direction: column;
+    background: black;
+    gap: -10px;
+    transition: 0.3s;
+  }
+  .nav-menu.ativo {
+    right: 0;
+  }
+  .nav-item {
+    margin: 16px 0;
+  }
+}

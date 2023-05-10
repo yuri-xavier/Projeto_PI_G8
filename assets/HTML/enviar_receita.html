@@ -8,13 +8,13 @@
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"
     />
-    <!-- <link rel="stylesheet" href="style.css" /> -->
+    <link rel="stylesheet" href="/assets/CSS/style.css" />
     <title>Page-about</title>
   </head>
   <body>
     <header>
       <nav class="navigation">
-        <a href= "#" class="logo">Logo</a>
+        <a href="#" class="logo">Logo</a>
         <ul class="nav-menu">
           <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About</a></li>
@@ -39,22 +39,40 @@
       </nav>
     </header>
     <main>
-      <section class="about">
-        <h1>Sobre a CodeChef</h1>
+      <section class="envio">
+        <h1>Envio de receita</h1>
         <p>
-          Bem-vindo ao nosso site de receitas! Aqui, você encontrará uma grande
-          variedade de pratos deliciosos e inspirações culinárias para todos os
-          gostos.Nós nos esforçamos para criar receitas fáceis de seguir e
-          únicas que vão surpreender seus convidados e impressionar seu paladar.
-          O objetivo é inspirar as pessoas a cozinhar em casa e experimentar
-          novas receitas. O site é atualizado regularmente e a equipe está
-          disponível para ajudar com dúvidas e sugestões.
+          Você pode contribuir para o crescimento do nosso site compartilhando
+          suas receitas favoritas. Faça parte da CodeChef!
         </p>
+        <form action="#" method="post">
+          <label for="titulo">Título:</label>
+          <input type="text" id="titulo" name="titulo" />
+
+          <label for="descricao">Descrição:</label>
+          <textarea id="descricao" name="descricao" required></textarea><br />
+
+          <label for="foto">Foto:</label>
+          <input type="file" id="foto" name="foto" required /><br />
+
+          <label for="autor">Autor:</label>
+          <input type="text" id="autor" name="autor" />
+
+          <label for="categoria">Categoria:</label>
+          <select id="categoria" name="categoria" required>
+            <option value="">Selecione</option>
+            <option value="massa">Massa</option>
+            <option value="salgado">Salgado</option>
+            <option value="doce">Doce</option>
+            <option value="bebida">Bebida</option></select
+          ><br />
+
+          <input type="submit" value="Enviar" />
+        </form>
       </section>
     </main>
-    <footer class="rodape">
-      <p>Copyright 2022-2023 Equipe G8 Proz S.A.</p>
-    </footer>
-    <!-- <script src="script.js"></script> -->
   </body>
+  <footer>
+    <p>Copyright 2022-2023 Equipe G8 Proz S.A.</p>
+  </footer>
 </html>
