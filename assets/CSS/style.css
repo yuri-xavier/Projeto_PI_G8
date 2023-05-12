@@ -49,9 +49,9 @@
 .navigation ul ul {
   display: none;
   position: absolute;
-  width: 160px;
+  width: 180px;
   background-color: #fa4f00;
-  box-shadow: inset 0px -20px 20px 1px black;
+  box-shadow: inset 0px -20px 20px 0px black;
 }
 
 .navigation ul li:hover ul {
@@ -117,8 +117,6 @@
 }
 main {
   width: 100%;
-  /* height: calc(100vh - 80px - 30px); */
-  /* overflow: hidden; */
 }
 main h2 {
   display: flex;
@@ -200,6 +198,7 @@ h1 {
   align-items: center;
   justify-content: center;
   box-shadow: 0 0.1rem 0.5rem #000000;
+  margin-bottom: 0;
 }
 
 @media (max-width: 785px) {
