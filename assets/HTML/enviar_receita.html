@@ -15,21 +15,29 @@
   <body>
     <header>
       <nav class="navigation">
-        <a href="#" class="logo">Logo</a>
+        <a href="index.html" class="logo"
+          ><img src="/assets/img/logo2.jpg" alt=""
+        /></a>
         <ul class="nav-menu">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
           <li>
             <a href="#">Receita</a>
             <ul>
-              <li><a href="receitas_massas.html">Receitas de massas</a></li>
-              <li><a href="receitas_salgados.html">Receitas de Salgados</a></li>
-              <li><a href="receitas_drink.html">Receitas de Drinks</a></li>
-              <li><a href="receitas_doces.html">Receitas de Doces</a></li>
-              <li><a href="enviar_receita.html">Envie sua receita</a></li>
+              <li class="nav-item">
+                <a href="receitas_massas.html">Massas</a>
+              </li>
+              <li class="nav-item">
+                <a href="receitas_salgados.html">Salgados</a>
+              </li>
+              <li class="nav-item">
+                <a href="receitas_drink.html">Drinks</a>
+              </li>
+              <li class="nav-item">
+                <a href="receitas_doces.html">Doces</a>
+              </li>
             </ul>
           </li>
-          <li><a href="criadores.html">Criadores</a></li>
+          <li><a href="enviar_receita.html">Envie sua receita</a></li>
+          <li><a href="criadores.html">Sobre</a></li>
           <i class="bx bx-search"></i>
         </ul>
         <div class="menu">
@@ -41,39 +49,35 @@
     </header>
     <main>
       <section class="envio">
-        <h1>Envio de receita</h1>
-        <p>
-          Você pode contribuir para o crescimento do nosso site compartilhando
-          suas receitas favoritas. Faça parte da CodeChef!
-        </p>
-        <form action="#" method="post">
-          <label for="titulo">Título:</label>
-          <input type="text" id="titulo" name="titulo" />
+        <h1>Cadastre-se</h1>
+        <form action="processar-cadastro.php" method="POST">
+          <label for="nome">Nome:</label>
+          <input type="text" id="nome" name="nome" required />
 
-          <label for="descricao">Descrição:</label>
-          <textarea id="descricao" name="descricao" required></textarea><br />
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required />
 
-          <label for="foto">Foto:</label>
-          <input type="file" id="foto" name="foto" required /><br />
+          <label for="senha">Senha:</label>
+          <input type="password" id="senha" name="senha" required />
 
-          <label for="autor">Autor:</label>
-          <input type="text" id="autor" name="autor" />
+          <input type="submit" value="Cadastrar" />
 
-          <label for="categoria">Categoria:</label>
-          <select id="categoria" name="categoria" required>
-            <option value="">Selecione</option>
-            <option value="massa">Massa</option>
-            <option value="salgado">Salgado</option>
-            <option value="doce">Doce</option>
-            <option value="bebida">Bebida</option></select
-          ><br />
-
-          <input type="submit" value="Enviar" />
+          <h4>Ou, se preferir:</h4>
+          <div>
+            <a
+              href="https://accounts.google.com/v3/signin/identifier?dsh=S-100124742%3A1684096585911755&authuser=0&continue=https%3A%2F%2Fmail.google.com&ec=GAlAFw&hl=pt-BR&service=mail&flowName=GlifWebSignIn&flowEntry=AddSession"
+              class="botao-gmail"
+              >Cadastre-se com Gmail</a
+            >
+            <a href="" class="botao-facebook">Cadastre-se com Facebook</a>
+            <a href="" class="botao-github">Cadastre-se com GitHub</a>
+            <a href="" class="botao-linkedin">Cadastre-se com LinkedIn</a>
+          </div>
         </form>
       </section>
     </main>
+    <footer class="rodape">
+      <p>Copyright 2022-2023 Equipe G8 Proz S.A.</p>
+    </footer>
   </body>
-  <footer>
-    <p>Copyright 2022-2023 Equipe G8 Proz S.A.</p>
-  </footer>
 </html>
