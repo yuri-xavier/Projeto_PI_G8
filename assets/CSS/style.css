@@ -1,9 +1,19 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
 * {
   padding: 0%;
   margin: 0%;
   box-sizing: border-box;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
+
+:root {
+  --hover: #996515;
+  --white: #fcfcfc;
+  --dark: #000000;
+  --fundo: rgba(0, 0, 0, 0.1);
+}
+
 /* -------------------------------------------------------------------------- */
 .navigation {
   width: 100%;
@@ -12,18 +22,30 @@
   align-items: center;
   justify-content: space-between;
   padding: 18px 40px;
-  background-color: rgb(0, 0, 0);
-  box-shadow: 0px 11px 20px 9px black;
-  color: white;
+  background-color: var(--dark);
+  box-shadow: 0px 11px 20px 9px var(--dark);
+  color: var(--white);
+}
+.pesquisa {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.pesquisa input {
+  margin-bottom: 10px;
+  border-radius: 5px;
+  width: 25%;
+  margin-top: 30px;
+  border-color: var(--hover);
 }
 .navigation a {
-  color: #f6f3f3;
+  color: var(--white);
 }
 .navigation li a i {
   font-size: 20px;
 }
 .navigation img {
-  color: var(--cor-primaria);
   width: 4.5rem;
   cursor: pointer;
 }
@@ -41,21 +63,20 @@
 }
 .navigation ul li a {
   display: inline-block;
-  color: var(--cor-primaria);
   text-decoration: none;
   padding: 10px;
   transition: background 0.5s;
 }
 .navigation ul li a:hover {
-  color: #996515;
+  color: var(--hover);
 }
 /* Sub menu */
 .navigation ul ul {
   display: none;
   position: absolute;
   width: 100px;
-  background-color: #020100;
-  box-shadow: 0px 11px 20px 9px black;
+  background-color: var(--dark);
+  box-shadow: 0px 11px 20px 9px var(--dark);
 }
 
 .navigation ul li:hover ul {
@@ -81,10 +102,10 @@
 }
 .menu .bar:nth-child(1),
 .menu .bar:nth-child(3) {
-  background-color: #996515;
+  background-color: var(--hover);
 }
 .menu .bar:nth-child(2) {
-  background-color: white;
+  background-color: var(--white);
 }
 /* -------------------------------------------------------------------------- */
 /* Criadores */
@@ -103,9 +124,9 @@
   /* padding: 20px; */
 }
 .card {
-  background-color: #ffffff;
+  background-color: var(--white);
   border-radius: 5px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 5px var(--fundo);
   overflow: hidden;
   cursor: pointer;
   transition: transform 0.3s;
@@ -114,7 +135,7 @@
 .card i {
   font-size: 25px;
   margin-left: 10px;
-  color: #000000;
+  color: var(--dark);
 }
 .card i:hover {
   color: #ff0202;
@@ -138,6 +159,7 @@
 }
 
 /* -------------------------------------------------------------------------- */
+/* Estilizaçao pela tags-HTML */
 header {
   width: 100vw;
 }
@@ -151,8 +173,13 @@ body {
 }
 main {
   width: 100%;
-  height: calc(100vh - 80px - 30px);
-  overflow: hidden;
+  /* height: calc(100vh - 80px - 30px);
+  overflow: hidden; */
+}
+main h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 main h2 {
   display: flex;
@@ -163,27 +190,6 @@ main h2 {
 main p {
   text-align: center;
 }
-
-/* -------------------------------------------------------------------------- */
-.card-videos {
-  display: flex;
-  gap: 5rem;
-  align-items: center;
-  padding: 10px;
-  width: 100%;
-  height: 100%;
-}
-.videos {
-  background-color: #ff0202;
-  display: flex;
-  flex-direction: column;
-  padding: 10px;
-}
-iframe {
-  width: 450px;
-  height: 400px;
-}
-/* -------------------------------------------------------------------------- */
 /* Receitas */
 .receitas {
   max-width: 1200px;
@@ -195,19 +201,15 @@ iframe {
 h1 {
   margin-bottom: 2rem;
 }
-/* .title {
-  text-align: center;
-  margin-bottom: 2rem;
-} */
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 2rem;
 }
 .grid-item {
-  background-color: #ffffff;
+  background-color: var(--white);
   border-radius: 5px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 5px var(--dark);
   overflow: hidden;
   cursor: pointer;
   transition: transform 0.3s;
@@ -226,50 +228,49 @@ h1 {
   text-align: center;
 }
 /* -------------------------------------------------------------------------- */
-/* .horizontal-section {
-  overflow-x: scroll;
-  scroll-snap-type: x mandatory;
-  scroll-padding-left: 20px;
-
-  
-  display: grid;
+/* Pagina-home */
+.card-videos {
+  display: flex;
+  gap: 5rem;
   width: 100%;
-  grid-auto-flow: column;
-  gap: 10px;
-  padding-left: 20px;
-}
-.cartao {
-  scroll-snap-align: start;
-
- 
-  width: 80px;
-  height: 80px;
-  flex-shrink: 0;
-  background: red;
-  border-radius: 20px;
-}
-body {
-  background: #f7fafc;
+  height: 400px;
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 100vh;
+  margin: auto;
 }
-.container {
-  background: #0c448f;
-  width: 300px;
-  height: 600px;
-  margin: 0 auto;
-  border-radius: 15px;
-  display: grid;
-  flex-direction: column;
-  align-items: center;
-  align-content: center;
-  justify-items: center;
-  gap: 20px;
-} */
-/* -------------------------------------------------------------------------- */
 
+.container {
+  width: 100%;
+  margin: 20px;
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: space-around;
+  align-items: center;
+  overflow-x: scroll;
+  flex-wrap: nowrap;
+  scroll-snap-type: x mandatory;
+  scroll-padding-left: 20px;
+  gap: 100px;
+}
+.videos {
+  display: flex;
+  flex-direction: column;
+  height: 300px;
+  width: 100%;
+  box-shadow: -1px 1px 20px 3px black;
+  scroll-snap-align: start;
+}
+.videos h2 {
+  font-size: 1.4rem;
+}
+iframe {
+  width: 400px;
+  height: 300px;
+}
+
+/* -------------------------------------------------------------------------- */
+/* Footer */
 .rodape {
   display: flex;
   width: 100%;
@@ -277,7 +278,7 @@ body {
   background: var(--cor-primaria);
   align-items: center;
   justify-content: center;
-  box-shadow: 0 0.1rem 0.5rem #000000;
+  box-shadow: 0 0.1rem 0.5rem var(--dark);
   /* margin-top: 140px; */
 }
 
@@ -305,7 +306,7 @@ body {
     height: 100%;
     text-align: center;
     flex-direction: column;
-    background: black;
+    background: var(--dark);
     gap: -10px;
     transition: 0.3s;
   }
