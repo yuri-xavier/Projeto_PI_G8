@@ -15,8 +15,8 @@ No final do README tera um link capaz de direcionar você direto ao projeto feit
 
 <h4 align="center">Na próxima sprint sera a implementaçao do codigos HTML, para ser construido o esqueleto das paginas.</h4>
 
-<h4 align="center">### Equipe composta por Yuri, Lais, Luziane, Luiz. 
-Bem-vindo ao site CODE-CHEF do Grupo 8 Turma 5 da PROZ!! ###</h4>
+<h4 align="center">## Equipe composta por Yuri, Lais, Luziane, Luiz. 
+Bem-vindo ao site CODE-CHEF do Grupo 8 Turma 5 da PROZ!! ##</h4>
 
 
 🔥 Site de receitas responsivo
