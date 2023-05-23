@@ -8,7 +8,7 @@
 }
 
 :root {
-  --hover: #996515;
+  --hover: #8c9915;
   --white: #fcfcfc;
   --dark: #000000;
   --fundo: rgba(0, 0, 0, 0.1);
@@ -69,7 +69,11 @@
 }
 .navigation ul li a:hover {
   color: var(--hover);
+  text-shadow: 1px 0px 20px rgb(247, 248, 247);
+  -webkit-transition: width 0.3s; /*Chrome*/
+  transition: width 0.5s;
 }
+
 /* Sub menu */
 .navigation ul ul {
   display: none;
@@ -106,6 +110,27 @@
 }
 .menu .bar:nth-child(2) {
   background-color: var(--white);
+}
+/* -------------------------------------------------------------------------- */
+/* Botao-TOPO */
+.topo {
+  position: fixed;
+  bottom: 20px;
+  right: -500px;
+  height: 50px;
+  width: 50px;
+  font-size: 50px;
+  transition: 0.6s all;
+  color: var(--dark);
+}
+
+.show-button .topo {
+  right: 20px;
+  transition: 0.6s all;
+}
+.topo:hover {
+  color: var(--hover);
+  cursor: pointer;
 }
 /* -------------------------------------------------------------------------- */
 /* Criadores */
@@ -161,15 +186,28 @@
 /* -------------------------------------------------------------------------- */
 /* Estilizaçao pela tags-HTML */
 header {
-  width: 100vw;
+  width: 100%;
 }
 body {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  width: 100vw;
+  /* width: 100vw; */
   height: 100vh;
+}
+body::-webkit-scrollbar {
+  width: 12px; /* width of the entire scrollbar */
+}
+
+body::-webkit-scrollbar-track {
+  background: rgb(255, 255, 254); /* color of the tracking area */
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: var(--hover); /* color of the scroll thumb */
+  border-radius: 20px; /* roundness of the scroll thumb */
+  border: 3px solid rgb(255, 255, 255); /* creates padding around scroll thumb */
 }
 main {
   width: 100%;
