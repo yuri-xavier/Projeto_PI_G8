@@ -5,6 +5,7 @@
   margin: 0%;
   box-sizing: border-box;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  text-decoration: none;
 }
 
 :root {
@@ -228,6 +229,7 @@ main h2 {
 main p {
   text-align: center;
 }
+/* -------------------------------------------------------------------------- */
 /* Receitas */
 .receitas {
   max-width: 1200px;
@@ -264,6 +266,7 @@ h1 {
   font-size: 1rem;
   padding: 1rem;
   text-align: center;
+  color: #000000;
 }
 /* -------------------------------------------------------------------------- */
 /* Pagina-home */
