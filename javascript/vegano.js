@@ -9,11 +9,11 @@ document.addEventListener("DOMContentLoaded", function () {
         const gridItem = document.createElement("div");
         gridItem.classList.add("grid-item");
         gridItem.innerHTML = `
-          <a href="${item.link}" target="_blank">
-          <img src="${item.image}" alt="${item.title}" class="item-image">
-          <h3 class="item-title">${item.title}</h3>
-          </a>
-          `;
+        <a href="${item.link}" target="_blank">
+        <img src="${item.image}" alt="${item.title}" class="item-image">
+        <h3 class="item-title">${item.title}</h3>
+        </a>
+        `;
         grid.appendChild(gridItem);
       });
     });
