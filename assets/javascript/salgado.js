@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
         <img src="${item.image}" alt="${item.title}" class="item-image">
         <h3 class="item-title">${item.title}</h3>
         </a>
-        `;
+
         grid.appendChild(gridItem);
       });
     });
