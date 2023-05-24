@@ -11,7 +11,7 @@ menu.addEventListener("click", () => {
 // scroll-----------------------------------------------------------------------------------------------
 
 const scrollAnima = document.querySelector('[data-anima="scroll"]');
-const metadewindow = window.innerHeight * 2.7;
+const metadewindow = window.innerHeight * 2.6;
 console.log(metadewindow);
 function animaScroll() {
   const topoItem = scrollAnima.getBoundingClientRect().top;
