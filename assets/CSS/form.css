@@ -52,7 +52,7 @@
 }
 
 .envio input[type="submit"]:hover {
-  background-color: #996515;
+  opacity: 0.8;
 }
 
 .envio .botao-gmail {
@@ -80,7 +80,9 @@
 .envio .botao-github,
 .envio .botao-linkedin {
   display: flex;
-  margin: 10px;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0px;
   padding: 10px 20px 10px;
   border-radius: 25px;
   text-decoration: none;
