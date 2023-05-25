@@ -1,7 +1,7 @@
 // massas ----------------------------------------------------------------------------------------------
 
 document.addEventListener("DOMContentLoaded", function () {
-  fetch("/assets/json/massas.json")
+  fetch("../assets/json/massas.json")
     .then((res) => res.json())
     .then((data) => {
       const grid = document.querySelector(".grid");
