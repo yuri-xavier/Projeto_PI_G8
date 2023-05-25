@@ -1,7 +1,7 @@
 // vegano ----------------------------------------------------------------------------------------------
 
 document.addEventListener("DOMContentLoaded", function () {
-  fetch("/assets/JSON/vegano.json")
+  fetch("../assets/json/vegano.json")
     .then((res) => res.json())
     .then((data) => {
       const grid = document.querySelector(".grid");

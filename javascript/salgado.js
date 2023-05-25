@@ -1,7 +1,7 @@
 // salgado ----------------------------------------------------------------------------------------------
 
 document.addEventListener("DOMContentLoaded", function () {
-  fetch("/assets/JSON/salgado.json")
+  fetch("../assets/json/salgado.json")
     .then((res) => res.json())
     .then((data) => {
       const grid = document.querySelector(".grid");

@@ -1,7 +1,7 @@
 // drinks ----------------------------------------------------------------------------------------------
 
 document.addEventListener("DOMContentLoaded", function () {
-  fetch("/assets/JSON/drinks.json")
+  fetch("../assets/json/drinks.json")
     .then((res) => res.json())
     .then((data) => {
       const grid = document.querySelector(".grid");
