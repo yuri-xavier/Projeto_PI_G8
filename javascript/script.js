@@ -40,7 +40,7 @@ window.addEventListener("scroll", animaScroll);
 
 $(document).ready(function () {
   // Quando o documento estiver completamente carregado
-  $.getJSON("/assets/json/data.json", function (data) {
+  $.getJSON("../assets/json/data.json", function (data) {
     // Faz uma requisição GET para o arquivo JSON e obtém os dados
     var items = data.items;
     // Armazena os itens do JSON na variável 'items'

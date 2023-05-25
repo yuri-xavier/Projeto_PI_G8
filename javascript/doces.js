@@ -2,7 +2,7 @@
 
 document.addEventListener("DOMContentLoaded", function () {
   // Aguarda o evento DOMContentLoaded, que indica que o documento HTML foi completamente carregado
-  fetch("/assets/json/doces.json")
+  fetch("../assets/json/doces.json")
     // Faz uma requisição HTTP para obter o arquivo JSON '/assets/JSON/doces.json'
     .then((res) => res.json())
     // Converte a resposta em formato JSON em um objeto JavaScript
