@@ -2,26 +2,21 @@
     "items": [
         {
             "title": "Bolinha de queijo",
-            "image": "https://www.receiteria.com.br/wp-content/uploads/bolinha-de-queijo-10-730x480.webp",
-            "link": "https://www.receiteria.com.br/receita/bolinha-de-queijo/"
+            "image": "https://static.itdg.com.br/images/640-420/70b928b54c2661f4aadc319dc838bb87/330492-original.jpg",
+            "link": "https://www.tudogostoso.com.br/receita/2082-bolinha-de-queijo.html?slideshowPage=2#recipe-cover"
         },{
-            "title": "Bolinha de queijo com bacon fácil",
-            "image": "https://www.receiteria.com.br/wp-content/uploads/bolinha-de-queijo-com-bacon-facil-00-730x449.webp",
-            "link": "https://www.receiteria.com.br/receita/bolinha-de-queijo-com-bacon-facil/"
-        },
-        {
             "title": "Coxinha com massa de arroz",
-            "image": "https://www.receiteria.com.br/wp-content/uploads/coxinha-com-massa-de-arroz-0-730x449.webp",
-            "link": "https://www.receiteria.com.br/receita/coxinha-com-massa-de-arroz/"
+            "image": "https://static.itdg.com.br/images/640-420/b5fe67575ed4082399a341211e97eff7/204335-original.jpg",
+            "link": "https://www.tudogostoso.com.br/receita/118926-coxinha-com-massa-de-arroz.html"
         },{
             "title": "Bolinho de carne seca com batata",
-            "image": "https://www.receiteria.com.br/wp-content/uploads/bolinho-de-carne-seca-com-batata-00-730x548.webp",
-            "link": "https://www.receiteria.com.br/receita/bolinho-de-carne-seca-com-batata/"
+            "image": "https://static.itdg.com.br/images/640-420/a4228e0161c203f89b7b902f0ec87ad0/273704-original.jpg",
+            "link": "https://www.tudogostoso.com.br/receita/125022-bolinho-de-aipim-mandioca-recheado-com-carne-seca.html"
         },
         {
-            "title": "Nuggets de frango recheado",
-            "image": "https://www.receiteria.com.br/wp-content/uploads/nuggets-de-frango-recheado-730x477.webp",
-            "link": "https://www.receiteria.com.br/receita/nuggets-de-frango-recheado/"
+            "title": "Torta salgada de liquidificador",
+            "image": "https://static.itdg.com.br/images/640-420/f266c84b1033ab75ab6a7c1d88150bea/324022-original.jpg",
+            "link": "https://www.tudogostoso.com.br/receita/1600-torta-salgada-de-liquidificador.html"
         },{
             "title": "Coxinha prática deliciosa",
             "image": "https://static.itdg.com.br/images/160-125/698d517f24c5b5de84f65590402aa1e0/38830-original.jpg",
@@ -98,6 +93,10 @@
             "title": "Kibe frito simplesKibe frito simples",
             "image": "https://cdn0.tudoreceitas.com/pt/posts/7/2/6/kibe_frito_simples_7627_600.webp",
             "link": "https://www.tudoreceitas.com/receita-de-kibe-frito-simples-7627.html"
+        },{
+            "title": "Bolinho de chuva salgado",
+            "image": "https://static.itdg.com.br/images/640-420/04291b41201bd5c85bb57d0632fb26ba/278254-original.jpg",
+            "link": "https://www.tudogostoso.com.br/receita/80396-bolinho-de-chuva-salgado-diferente.html?slideshowPage=6#recipe-cover"
         },
         {
             "title": "Bolinho de arroz com polvilho",
