@@ -1,27 +1,43 @@
 /* Cadastro */
 *{
   box-sizing: border-box;
+  font-family: sans-serif;
 }
 
 body{
-  width: 100%;
-  height: 100%;
-}
 
-form {
-  width: 300px;
+  animation: changeBackground 100s infinite;
+  background-size: cover;
+  
+  }
+  
+  @keyframes changeBackground {
+  0% { background-image: url(../img/img1.jpg); }
+  10% { background-image: url(../img/img2.jpg); }
+  20% { background-image: url(../img/img3.jpg); }
+  30% { background-image: url(../img/img4.jpg); }
+  40% { background-image: url(../img/img5.jpg); }
+  50% { background-image: url(../img/img6.jpg); }
+  60% { background-image: url(../img/img7.jpg); }
+  }
+
+
+/* form {
+  width: 50%;
   height: 200px, auto;
-}
+} */
 
 input{
   display: block;
   margin: 10px, auto;
-  
+  height: 40px;
 }
 
+
+
 .envio {
-  width: 100vw;
-  margin: 50px auto;
+  
+  margin: 50px 0px 0px 0px;
   text-align: center;
 }
 
@@ -32,11 +48,16 @@ input{
 .envio p {
   font-size: 16px;
   margin-bottom: 20px;
+  font-weight: bold;
+  
 }
 .formulario {
-  display: flex;
-  justify-content: center;
-  width: 100vw;
+  display: inline-flex;
+  /* justify-content: center; */
+  background: rgba(252, 250, 250, 0.479);
+  padding: 2rem;
+  
+  
 }
 .envio form {
   text-align: left;
@@ -54,7 +75,7 @@ input{
 .envio select {
   width: 100%;
   margin-bottom: 10px;
-  border-radius: 5px;
+  border-radius: 15px;
 }
 
 .envio input[type="submit"] {
@@ -126,21 +147,31 @@ input{
 
 .texto{
   line-height: 20px;
-  font-family: Poppins, Arial, sans-serif;
-  
+  /* font-family: Poppins, Arial, sans-serif; */
+  color: #000;
 }
 
 .cadastro{
-  color: #996515
+  color: #996515;
+  font-weight: bolder;
+  text-decoration: solid;
+
 }
 
 .cadastro a{
-  outline-color: initial;
-  outline-style: initial;
-  outline-width: 2px;
+
+  outline-width: 100px;
   cursor: pointer
 }
 
 .botao-facebook .u-icon{
   fill
 }
+
+
+.icone-social{
+  margin-right: 10px;
+  fill: currentColor;
+
+}
+

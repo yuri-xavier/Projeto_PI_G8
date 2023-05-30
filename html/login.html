@@ -11,14 +11,15 @@
     <link rel="stylesheet" href="/assets/CSS/style.css" />
     <link rel="stylesheet" href="/assets/CSS/form.css" />
     <script src="/assets/javascript/script.js" defer></script>
+    <script src="/javascript/img.js" defer></script>
     <script src="/javascript/form.js" defer></script>
     <title>Login</title>
   </head>
   <body>
     <header id="topo">
       <nav class="navigation">
-        <a href="index.html" class="logo"
-          ><img src="/assets/img/logo2.jpg" alt=""
+        <a href="../index.html" class="logo"
+          ><img src="/assets/img/logo2_preview_rev_1.png" alt=""
         /></a>
         <ul class="nav-menu">
           <li><a href="criadores.html">Sobre</a></li>
@@ -59,16 +60,26 @@
     </header>
     <main>
       <section class="envio">
-        <h1>Login</h1>
+        
         <div class="formulario">
-          <form action="processar-login.php" method="POST">
+          
+          <form id="form"> <!-- action="processar-login.php" method="POST"> -->
+            <h1>Login</h1>
             <label for="email">Email:</label>
-            <input type="email" placeholder="fulano@email.com" id="email" name="email" required />
+            <input type="email" placeholder=" user@email.com" id="email" name="email" required />
 
             <label for="senha">Senha:</label>
             <input type="password"  id="senha" name="senha" required />
-
-            <input type="submit" value="Entrar" />
+            <div>
+            <a href="#"> <p class="texto">Esqueceu a senha?</p></a>
+            </div>
+            <a href="#">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+            </a>
+            <!-- <input type="submit" value="Entrar" /> -->
 
             <p class="texto">Ou, se preferir:</p>
             <div>
@@ -83,9 +94,11 @@
                     c-2.1,0-3.8,1.3-3.8,2.9c0,1.6,1.5,2.9,3.6,2.9C8.2,16.7,9.5,15.5,9.5,13.9z"></path></svg>
                     Entre com o Gmail</a
               >
-              <a href="" class="botao-facebook"><svg role="img" class="icone-social" viewBox="0 0 18 18" width="18" height="18"><title lang="fr">Icone facebook</title>
+              <a href="" class="botao-facebook">
+                <svg role="img" class="icone-social" viewBox="0 0 18 18" width="18" height="18"><title lang="fr">Icone facebook</title>
                 <path d="M6.9,5.9H5V9h1.9v9h3.6V8.9H13l0.3-3h-2.8c0,0,0-1.1,0-1.7c0-0.7,0.1-1,0.8-1c0.6,0,2,0,2,0V0
-                c0,0-2.1,0-2.5,0C8.1,0,6.9,1.2,6.9,3.5C6.9,5.4,6.9,5.9,6.9,5.9z"></path></svg>Entre com o Facebook</a>
+                c0,0-2.1,0-2.5,0C8.1,0,6.9,1.2,6.9,3.5C6.9,5.4,6.9,5.9,6.9,5.9z"></path></svg>
+                Entre com o Facebook</a>
             
             </div>
             <p class="texto">Não tem conta?

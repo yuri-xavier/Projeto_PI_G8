@@ -9,11 +9,15 @@
 }
 
 :root {
-  --hover: #8c9915;
+  --hover: #996515;
+  /* --hover: #8c9915; */
   --white: #fcfcfc;
   --dark: #000000;
   --fundo: rgba(0, 0, 0, 0.1);
+  --vinho:#835613;
+
 }
+
 
 /* -------------------------------------------------------------------------- */
 .navigation {
@@ -22,13 +26,14 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 18px 40px;
+  padding: 18px 30px;
   background-color: var(--dark);
-  box-shadow: 0px 11px 20px 9px var(--dark);
+  /* box-shadow: 0px 10px 10px 9px var(--dark); */
   color: var(--white);
 }
 .navigation a {
   color: var(--white);
+  font-weight: bold;
 }
 .navigation li a i {
   font-size: 20px;
@@ -67,13 +72,15 @@
   display: none;
   position: absolute;
   width: 100px;
-  background-color: var(--dark);
-  box-shadow: 0px 11px 20px 9px var(--dark);
+  background-color: var(--vinho);
+  box-shadow: 0px 11px 20px 9px var(--hover);
+  z-index:2; /* teste */
 }
 
 .navigation ul li:hover ul {
-  display: block;
-}
+  /* display: block; */
+  display: inherit; /* teste */
+} 
 
 .navigation ul ul li a {
   display: block;
@@ -94,7 +101,7 @@
 }
 .menu .bar:nth-child(1),
 .menu .bar:nth-child(3) {
-  background-color: var(--hover);
+  background-color: var(--white);
 }
 .menu .bar:nth-child(2) {
   background-color: var(--white);
@@ -226,7 +233,7 @@ body::-webkit-scrollbar {
 }
 
 body::-webkit-scrollbar-track {
-  background: rgb(255, 255, 254); /* color of the tracking area */
+   background: rgb(255, 255, 254); /*color of the tracking area */
 }
 
 body::-webkit-scrollbar-thumb {
@@ -371,7 +378,7 @@ iframe {
     height: 100%;
     text-align: center;
     flex-direction: column;
-    background: var(--dark);
+    background: var(--vinho);
     gap: -10px;
     transition: 0.3s;
   }
