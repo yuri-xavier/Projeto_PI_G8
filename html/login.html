@@ -11,8 +11,7 @@
     <link rel="stylesheet" href="../assets/css/style.css" />
     <link rel="stylesheet" href="../assets/css/form.css" />
     <script src="../javascript/script.js" defer></script>
-    <script src="/javascript/img.js" defer></script>
-    <script src="/javascript/form.js" defer></script>
+    <script src="../javascript/forms.js" defer></script>
     <link rel="icon" type="image/png" href="../assets/img/logo.jpg" />
     <title>Login</title>
   </head>
@@ -69,14 +68,26 @@
             <label for="email">Email:</label>
             <input
               type="email"
-              placeholder=" user@email.com"
+              placeholder=" user@example.com"
               id="email"
               name="email"
-              required
+              class="required"
+              oninput="emailValidate2()"
             />
+            <span class="span-required">Digite um email válido</span>
 
             <label for="senha">Senha:</label>
-            <input type="password" id="senha" name="senha" required />
+            <input
+              type="password"
+              id="senha"
+              name="senha"
+              class="required"
+              oninput="passwordValidate()"
+            />
+            <span class="span-required"
+              >Digite uma senha com no mínimo 8 caracteres</span
+            >
+
             <div>
               <a href="#"> <p class="texto">Esqueceu a senha?</p></a>
             </div>
@@ -86,7 +97,8 @@
               <span></span>
               <span></span>
             </a>
-            <!-- <input type="submit" value="Entrar" /> -->
+
+            <input type="submit" value="Entrar" />
 
             <p class="texto">Ou, se preferir:</p>
             <div>
