@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <script src="./javascript/data.js" defer></script>
+    <script src="./javascript/script.js" defer></script>
+    <link
+      rel="stylesheet"
+      href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css"
+    />
+    <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+    <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+    <link
+      rel="icon"
+      type="image/png"
+      href="./assets/img/Picsart_23-05-25_18-25-50-063.png"
+    />
+    <title>Home</title>
+  </head>
+  <body>
+    <header id="topo">
+      <nav class="navigation">
+        <a href="index.html" class="logo"
+          ><img src="assets/img/logo2_preview_rev_1.png" alt=""
+        /></a>
+        <ul class="nav-menu">
+          <li><a href="html/criadores.html">Sobre</a></li>
+          <li>
+            <a href="#">Receita</a>
+            <ul>
+              <li class="nav-item">
+                <a href="html/receitas_massas.html">Massas</a>
+              </li>
+              <li class="nav-item">
+                <a href="html/receitas_salgados.html">Salgados</a>
+              </li>
+              <li class="nav-item">
+                <a href="html/receitas_drink.html">Drinks</a>
+              </li>
+              <li class="nav-item">
+                <a href="html/receitas_doces.html">Doces</a>
+              </li>
+              <li class="nav-item">
+                <a href="html/receitas_veganas.html">Veganas</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="html/login.html"><i class="bx bx-user-plus"></i></a>
+          </li>
+        </ul>
+        <div class="menu">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <div class="pesquisa">
+        <div class="search">
+          <a href="" target="_blank" hidden></a>
+          <input
+            type="search"
+            id="pesquisa"
+            name="pesquisa"
+            placeholder="O que você quer comer hoje?"
+            required
+          />
+        </div>
+      </div>
+      <h1>Bem-vindo ao Code-Chef</h1>
+      <!-- <div class="card-videos">
+        <div class="container">
+          <div class="videos">
+            <iframe
+              src="https://www.youtube.com/embed/VLG0shV8k1c"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+            ></iframe>
+            <h2>Pizza</h2>
+          </div>
+          <div class="videos">
+            <iframe
+              src="https://www.youtube.com/embed/QFMxJWh3mqE"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+            ></iframe>
+            <h2>bolo de cenoura</h2>
+          </div>
+          <div class="videos">
+            <iframe
+              src="https://www.youtube.com/embed/mUfviaL0F7o"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+            ></iframe>
+            <h2>mojito</h2>
+          </div>
+          <div class="videos">
+            <iframe
+              src="https://www.youtube.com/embed/VLG0shV8k1c"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+            ></iframe>
+            <h2>Pizza</h2>
+          </div>
+          <div class="videos">
+            <iframe
+              src="https://www.youtube.com/embed/QOxDxjhyyII"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+            ></iframe>
+            <h2>RATAOUILLE</h2>
+          </div>
+        </div>
+      </div> -->
+      <h2>Destaques</h2>
+      <div class="receitas">
+        <div class="grid">
+          <div class="grid-item">
+            <a
+              href="https://www.soreceitasfaceis.com/doces/pudins-e-musses/pudim-de-caneca-no-microondas.html"
+            >
+              <img
+                class="item-image"
+                src="https://sp-ao.shortpixel.ai/client/to_auto,q_lossy,ret_img/https://www.soreceitasfaceis.com/wp-content/uploads/2016/08/pudim-de-caneca-860x380.jpg"
+                alt="Pudim de Caneca no Microondas"
+              />
+            </a>
+            <h3 class="item-title">Pudim de Caneca no Microondas</h3>
+          </div>
+          <div class="grid-item">
+            <a
+              href="https://www.tudoreceitas.com/receita-de-como-fazer-cocada-simples-com-3-ingredientes-11329.html"
+            >
+              <img
+                class="item-image"
+                src="https://cdn0.tudoreceitas.com/pt/posts/9/2/3/como_fazer_cocada_simples_com_3_ingredientes_11329_600.webp"
+                alt="Cocada simples"
+              />
+            </a>
+            <h3 class="item-title">Cocada simples</h3>
+          </div>
+          <div class="grid-item">
+            <a
+              href="https://www.tudoreceitas.com/receita-de-doce-de-leite-ninho-com-3-ingredientes-11334.html"
+            >
+              <img
+                class="item-image"
+                src="https://cdn0.tudoreceitas.com/pt/posts/4/3/3/doce_de_leite_ninho_com_3_ingredientes_11334_600.webp"
+                alt="Doce de leite ninho"
+              />
+            </a>
+            <h3 class="item-title">Doce de leite ninho</h3>
+          </div>
+          <div class="grid-item">
+            <a
+              href="https://www.soreceitasfaceis.com/doces/gelado-de-abacaxi.html"
+            >
+              <img
+                class="item-image"
+                src="https://sp-ao.shortpixel.ai/client/to_auto,q_lossy,ret_img/https://www.soreceitasfaceis.com/wp-content/uploads/2016/12/gelado_de_abacaxi_com_gelatina_e_creme_de_leite.jpg"
+                alt="Gelado de Abacaxi"
+              />
+            </a>
+            <h3 class="item-title">Gelado de Abacaxi</h3>
+          </div>
+          <div class="grid-item">
+            <a href="https://receitinhas.com.br/receita/caipirinha-sem-alcool/">
+              <img
+                class="item-image"
+                src="https://receitinhas.com.br/wp-content/uploads/2022/12/Caipirinha-sem-alcool-1-730x365.png"
+                alt="Caipirinha sem álcool"
+              />
+            </a>
+            <h3 class="item-title">Caipirinha sem álcool</h3>
+          </div>
+          <div class="grid-item">
+            <a
+              href="https://cybercook.com.br/receitas/bebidas/receita-de-coquetel-de-frutas-sem-alcool-123501"
+            >
+              <img
+                class="item-image"
+                src="https://img.cybercook.com.br/receitas/501/coquetel-de-frutas-sem-alcool-1-840x480.jpeg?q=75"
+                alt="Coquetel de Frutas - Sem Álccol"
+              />
+            </a>
+            <h3 class="item-title">Coquetel de Frutas - Sem Álcool</h3>
+          </div>
+          <div class="grid-item">
+            <a
+              href="https://www.recepedia.com/pt-br/receita/pizza/236960-pizza-de-frigideira/"
+            >
+              <img
+                class="item-image"
+                src="https://assets.unileversolutions.com/recipes-v2/236960.jpg?imwidth=800"
+                alt="Pizza de Frigideira"
+              />
+            </a>
+            <h3 class="item-title">Pizza de Frigideira</h3>
+          </div>
+          <div class="grid-item">
+            <a
+              href="https://www.receiteria.com.br/receita/macarrao-ao-molho-pesto-facil/"
+            >
+              <img
+                class="item-image"
+                src="https://www.receiteria.com.br/wp-content/uploads/macarrao-ao-molho-pesto-facil-00-730x449.webp"
+                alt="Macarrão ao molho pesto"
+              />
+            </a>
+            <h3 class="item-title">Macarrão ao molho pesto</h3>
+          </div>
+          <div class="grid-item">
+            <a href="https://www.receiteria.com.br/receita/bolinha-de-queijo/">
+              <img
+                class="item-image"
+                src="https://www.receiteria.com.br/wp-content/uploads/bolinha-de-queijo-10-730x480.webp"
+                alt="Bolinha de queijo"
+              />
+            </a>
+            <h3 class="item-title">Bolinha de queijo</h3>
+          </div>
+          <div class="grid-item">
+            <a
+              href="https://www.receiteria.com.br/receita/bolinha-de-queijo-com-bacon-facil/"
+            >
+              <img
+                class="item-image"
+                src="https://www.receiteria.com.br/wp-content/uploads/bolinha-de-queijo-com-bacon-facil-00-730x449.webp"
+                alt="Bolinha de queijo com bacon fácil"
+              />
+            </a>
+            <h3 class="item-title">Bolinha de queijo com bacon fácil</h3>
+          </div>
+          <div class="grid-item">
+            <a
+              href="https://www.tudogostoso.com.br/receita/257-macarronada-com-abobrinha.html"
+            >
+              <img
+                class="item-image"
+                src="https://static.itdg.com.br/images/640-420/197c07126eb54ed5742a9af1633b5b37/18632-original.jpg"
+                alt="Macarronada com abobrinha"
+              />
+            </a>
+            <h3 class="item-title">Macarronada com abobrinha</h3>
+          </div>
+          <div class="grid-item">
+            <a
+              href="https://www.receiteria.com.br/receita/lasanha-de-frango-ao-molho-branco/"
+            >
+              <img
+                class="item-image"
+                src="https://www.receiteria.com.br/wp-content/uploads/lasanha-de-frango-ao-molho-branco-730x449.webp"
+                alt="Lasanha de frango ao molho branco"
+              />
+            </a>
+            <h3 class="item-title">Lasanha de frango ao molho branco</h3>
+          </div>
+        </div>
+      </div>
+      <div data-scroll="suave" data-anima="scroll">
+        <a href="#topo">
+          <div class="topo">
+            <i class="bx bxs-caret-up-circle"></i>
+          </div>
+        </a>
+      </div>
+    </main>
+    <footer class="rodape">
+      <p>Copyright 2022-2023 Equipe G8 Proz S.A.</p>
+    </footer>
+  </body>
+</html>
