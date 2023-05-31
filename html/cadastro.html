@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="../assets/css/style.css" />
     <link rel="stylesheet" href="../assets/css/form.css" />
     <script src="../javascript/script.js" defer></script>
+    <script src="../javascript/forms.js" defer></script>
     <link rel="icon" type="image/png" href="../assets/img/logo.jpg" />
     <title>Cadastre-se</title>
   </head>
@@ -61,23 +62,48 @@
             <label for="nome">Nome:</label>
             <input
               type="text"
-              placeholder=" Digite seu nome e sobrenome"
+              placeholder=" Digite seu nome"
               id="nome"
               name="nome"
-              required
+              class="required"
+              oninput="nameValidate ()"
             />
+            <span class="span-required"
+              >Seu nome deve ter no mínimo 3 caracteres.</span
+            >
 
             <label for="email">Email:</label>
             <input
               type="email"
-              placeholder=" user@email.com"
+              placeholder=" user@example.com"
               id="email"
               name="email"
-              required
+              class="required"
+              oninput="emailValidate()"
             />
+            <span class="span-required">Digite um email válido</span>
 
             <label for="senha">Senha:</label>
-            <input type="password" id="senha" name="senha" required />
+            <input
+              type="password"
+              id="senha"
+              name="senha"
+              class="required"
+              oninput="passwordValidate ()"
+            />
+            <span class="span-required"
+              >Digite uma senha com no mínimo 8 caracteres</span
+            >
+
+            <label for="senha">Repetir senha:</label>
+            <input
+              type="password"
+              id="senha"
+              name="senha"
+              class="required"
+              oninput="comparePassword ()"
+            />
+            <span class="span-required">As senhas devem ser iguais</span>
 
             <input type="submit" value="Cadastrar" />
 
