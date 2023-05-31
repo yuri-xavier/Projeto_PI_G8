@@ -169,13 +169,13 @@
   padding: 1rem;
   text-align: center;
 }
-
+.conteiner-card p {
+  padding: 1rem;
+}
 .card-wrapper {
   display: grid;
-  /* grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); */
   grid-template-columns: repeat(2, 1fr);
   gap: 2.2rem;
-  /* padding: 20px; */
 }
 .card {
   background-color: var(--white);
