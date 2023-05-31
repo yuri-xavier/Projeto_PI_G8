@@ -227,7 +227,7 @@ body {
   height: 100vh;
 }
 body::-webkit-scrollbar {
-  width: 12px; /* width of the entire scrollbar */
+  width: 12px;
 }
 
 body::-webkit-scrollbar-track {
