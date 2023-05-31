@@ -62,3 +62,47 @@ $(document).ready(function () {
     });
   });
 });
+
+// Barra-pesquisa Java-Script---------------------------------------------------------------------------------------
+
+// document.addEventListener("DOMContentLoaded", function () {
+//   // When the document is fully loaded
+//   fetch("../assets/json/data.json")
+//     .then((response) => response.json())
+//     .then((data) => {
+//       var items = data.items;
+//       // Store the items from the JSON in the 'items' variable
+
+//       document.getElementById("pesquisa").addEventListener("input", function () {
+//         var inputValue = this.value;
+//         var suggestions = items
+//           .filter(function (item) {
+//             return item.title.toLowerCase().includes(inputValue.toLowerCase());
+//           })
+//           .map(function (item) {
+//             return item.title;
+//           });
+
+//         autocomplete(suggestions);
+//       });
+
+//       function autocomplete(suggestions) {
+//         var autocompleteContainer = document.getElementById("autocomplete-container");
+//         autocompleteContainer.innerHTML = "";
+
+//         suggestions.forEach(function (suggestion) {
+//           var suggestionElement = document.createElement("div");
+//           suggestionElement.textContent = suggestion;
+//           suggestionElement.addEventListener("click", function () {
+//             var selectedItem = items.find(function (item) {
+//               return item.title === suggestion;
+//             });
+
+//             window.open(selectedItem.link);
+//           });
+
+//           autocompleteContainer.appendChild(suggestionElement);
+//         });
+//       }
+//     });
+// });

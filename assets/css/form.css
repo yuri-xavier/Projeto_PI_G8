@@ -1,44 +1,10 @@
 /* Cadastro */
-*{
-  box-sizing: border-box;
-  font-family: sans-serif;
-}
-
-body{
-
-  animation: changeBackground 100s infinite;
-  background-size: cover;
-  
-  }
-  
-  @keyframes changeBackground {
-  0% { background-image: url(../img/img1.jpg); }
-  10% { background-image: url(../img/img2.jpg); }
-  20% { background-image: url(../img/img3.jpg); }
-  30% { background-image: url(../img/img4.jpg); }
-  40% { background-image: url(../img/img5.jpg); }
-  50% { background-image: url(../img/img6.jpg); }
-  60% { background-image: url(../img/img7.jpg); }
-  }
-
-
-/* form {
-  width: 50%;
-  height: 200px, auto;
-} */
-
-input{
-  display: block;
-  margin: 10px, auto;
-  height: 40px;
-}
-
-
 
 .envio {
-  
-  margin: 50px 0px 0px 0px;
+  width: 100vw;
+  margin: 50px auto;
   text-align: center;
+  margin: 10px auto;
 }
 
 .envio h1 {
@@ -48,16 +14,11 @@ input{
 .envio p {
   font-size: 16px;
   margin-bottom: 20px;
-  font-weight: bold;
-  
 }
 .formulario {
-  display: inline-flex;
-  /* justify-content: center; */
-  background: rgba(252, 250, 250, 0.479);
-  padding: 2rem;
-  
-  
+  display: flex;
+  justify-content: center;
+  width: 100vw;
 }
 .envio form {
   text-align: left;
@@ -75,7 +36,7 @@ input{
 .envio select {
   width: 100%;
   margin-bottom: 10px;
-  border-radius: 15px;
+  border-radius: 5px;
 }
 
 .envio input[type="submit"] {
@@ -98,11 +59,13 @@ input{
 .envio .botao-gmail {
   background-color: #db4a39;
   color: white;
+  gap: 1rem;
 }
 
 .envio .botao-facebook {
   background-color: #4267b2;
   color: white;
+  gap: 1rem;
 }
 
 .envio .botao-github {
@@ -141,37 +104,3 @@ input{
   display: flex;
   justify-content: center;
 }
-
-/* login */
-
-
-.texto{
-  line-height: 20px;
-  /* font-family: Poppins, Arial, sans-serif; */
-  color: #000;
-}
-
-.cadastro{
-  color: #996515;
-  font-weight: bolder;
-  text-decoration: solid;
-
-}
-
-.cadastro a{
-
-  outline-width: 100px;
-  cursor: pointer
-}
-
-.botao-facebook .u-icon{
-  fill
-}
-
-
-.icone-social{
-  margin-right: 10px;
-  fill: currentColor;
-
-}
-
