@@ -33,8 +33,38 @@ function animaScroll() {
   }
 }
 
+//Dark-mode -----------------------------------------------------------------------------------------------
+
 window.addEventListener("scroll", animaScroll);
 // Adiciona um ouvinte de evento de rolagem à janela do navegador que chama a função 'animaScroll' quando ocorre um evento de rolagem
+
+// Dark or light mode -----------------------------------------------------------------------------------
+const changeThemeBtn = document.querySelector("#change-theme");
+
+function toggleDarkMode() {
+  document.body.classList.toggle("dark");
+}
+//load lught or dark mode
+function loadTheme() {
+  const darkMode = localStorage.getItem("dark");
+
+  if (darkMode) {
+    toggleDarkMode();
+  }
+}
+
+loadTheme();
+
+changeThemeBtn.addEventListener("change", function () {
+  toggleDarkMode();
+
+  // save or remove dark mode
+  localStorage.removeItem("dark");
+
+  if (document.body.classList.contains("dark")) {
+    localStorage.setItem("dark", 1);
+  }
+});
 
 // Barra-pesquisa ---------------------------------------------------------------------------------------
 

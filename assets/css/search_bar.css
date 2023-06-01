@@ -1,0 +1,33 @@
+/* Barra-pesquisa */
+
+.search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.pesquisa input {
+  height: 4vh;
+  margin-bottom: 10px;
+  border-radius: 20px;
+  padding: 5px;
+  width: 30%;
+  margin-top: 30px;
+  border-color: var(--hover);
+}
+.search .icon {
+  position: absolute;
+  right: 35.5rem;
+  top: 7rem;
+  height: 1.5rem;
+  width: 1.5rem;
+  text-align: center;
+  line-height: 3.4rem;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+.search .icon i {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
