@@ -68,71 +68,91 @@ changeThemeBtn.addEventListener("change", function () {
 
 // Barra-pesquisa ---------------------------------------------------------------------------------------
 
-$(document).ready(function () {
-  // Quando o documento estiver completamente carregado
-  $.getJSON("../assets/json/data.json", function (data) {
-    // Faz uma requisição GET para o arquivo JSON e obtém os dados
-    var items = data.items;
-    // Armazena os itens do JSON na variável 'items'
-    $("#pesquisa").autocomplete({
-      // Aplica a função de autocomplete ao elemento com o ID 'pesquisa'
-      source: items.map(function (item) {
-        return item.title;
-      }),
-      // Define a fonte de sugestões para o autocomplete como os títulos dos itens
-      select: function (event, ui) {
-        var selectedItem = items.find(function (item) {
-          return item.title === ui.item.value;
-        });
-        // Quando um item é selecionado no autocomplete, encontra o item correspondente
+// $(document).ready(function () {
+//   // Quando o documento estiver completamente carregado
+//   $.getJSON("../assets/json/data.json", function (data) {
+//     // Faz uma requisição GET para o arquivo JSON e obtém os dados
+//     var items = data.items;
+//     // Armazena os itens do JSON na variável 'items'
+//     $("#pesquisa").autocomplete({
+//       // Aplica a função de autocomplete ao elemento com o ID 'pesquisa'
+//       source: items.map(function (item) {
+//         return item.title;
+//       }),
+//       // Define a fonte de sugestões para o autocomplete como os títulos dos itens
+//       select: function (event, ui) {
+//         var selectedItem = items.find(function (item) {
+//           return item.title === ui.item.value;
+//         });
+//         // Quando um item é selecionado no autocomplete, encontra o item correspondente
 
-        // Abre o link do item selecionado em uma nova janela do navegador
-        window.open(selectedItem.link);
-      },
-    });
+//         // Abre o link do item selecionado em uma nova janela do navegador
+//         window.open(selectedItem.link);
+//       },
+//     });
+//   });
+// });
+
+// Carousel ---------------------------------------------------------------------------------------
+const carousel = document.querySelector(".carrosel-grid");
+const leftButton = document.getElementById("left");
+const rightButton = document.getElementById("right");
+
+let currentPosition = 0;
+const scrollAmount = 141.5; // Ajuste o valor para controlar o deslocamento dos itens
+
+function moveCarousel(direction) {
+  const maxPosition = carousel.scrollWidth - carousel.offsetWidth;
+
+  if (direction === "left") {
+    currentPosition -= scrollAmount;
+    if (currentPosition < 0) {
+      currentPosition = 0;
+    }
+  } else {
+    currentPosition += scrollAmount;
+    if (currentPosition > maxPosition) {
+      currentPosition = maxPosition;
+    }
+  }
+
+  carousel.scrollTo({
+    left: currentPosition,
+    behavior: "smooth",
   });
+}
+
+leftButton.addEventListener("click", () => moveCarousel("left"));
+rightButton.addEventListener("click", () => moveCarousel("right"));
+
+function updateButtonVisibility() {
+  const maxPosition = carousel.scrollWidth - carousel.offsetWidth;
+
+  if (currentPosition === 0) {
+    leftButton.style.display = "none";
+  } else {
+    leftButton.style.display = "block";
+  }
+
+  if (currentPosition === maxPosition) {
+    rightButton.style.display = "none";
+  } else {
+    rightButton.style.display = "block";
+  }
+}
+
+leftButton.addEventListener("click", () => {
+  moveCarousel("left");
+  updateButtonVisibility();
 });
 
-// Barra-pesquisa Java-Script---------------------------------------------------------------------------------------
+rightButton.addEventListener("click", () => {
+  moveCarousel("right");
+  updateButtonVisibility();
+});
 
-// document.addEventListener("DOMContentLoaded", function () {
-//   // When the document is fully loaded
-//   fetch("../assets/json/data.json")
-//     .then((response) => response.json())
-//     .then((data) => {
-//       var items = data.items;
-//       // Store the items from the JSON in the 'items' variable
+window.addEventListener("resize", () => {
+  updateButtonVisibility();
+});
 
-//       document.getElementById("pesquisa").addEventListener("input", function () {
-//         var inputValue = this.value;
-//         var suggestions = items
-//           .filter(function (item) {
-//             return item.title.toLowerCase().includes(inputValue.toLowerCase());
-//           })
-//           .map(function (item) {
-//             return item.title;
-//           });
-
-//         autocomplete(suggestions);
-//       });
-
-//       function autocomplete(suggestions) {
-//         var autocompleteContainer = document.getElementById("autocomplete-container");
-//         autocompleteContainer.innerHTML = "";
-
-//         suggestions.forEach(function (suggestion) {
-//           var suggestionElement = document.createElement("div");
-//           suggestionElement.textContent = suggestion;
-//           suggestionElement.addEventListener("click", function () {
-//             var selectedItem = items.find(function (item) {
-//               return item.title === suggestion;
-//             });
-
-//             window.open(selectedItem.link);
-//           });
-
-//           autocompleteContainer.appendChild(suggestionElement);
-//         });
-//       }
-//     });
-// });
+updateButtonVisibility();
