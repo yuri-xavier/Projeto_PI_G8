@@ -81,7 +81,9 @@
 .navigation ul ul li a {
   display: block;
 }
-
+.scroll-lock {
+  overflow: hidden;
+}
 /* menu-bar */
 .menu {
   cursor: pointer;
@@ -139,6 +141,7 @@ body {
   height: 100vh;
 }
 main {
+  margin-top: 20px;
   width: 100%;
 }
 main h1 {
@@ -177,10 +180,6 @@ body::-webkit-scrollbar-thumb {
   margin: auto;
   padding: 2rem;
   text-align: center;
-}
-.receitas p,
-h1 {
-  margin-bottom: 2rem;
 }
 .grid {
   display: grid;
@@ -251,6 +250,7 @@ h1 {
     background: var(--vinho);
     gap: -10px;
     transition: 0.3s;
+    z-index: 10000;
   }
   .nav-menu.ativo {
     right: 0;

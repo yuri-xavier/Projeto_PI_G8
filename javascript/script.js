@@ -6,13 +6,21 @@ const NavMenu = document.querySelector(".nav-menu");
 menu.addEventListener("click", () => {
   menu.classList.toggle("ativo");
   NavMenu.classList.toggle("ativo");
+  document.body.classList.toggle("scroll-lock");
+  window.scroll({
+    top: 0,
+    left: 0,
+    behavior: "smooth",
+  });
 });
 
 // scroll-----------------------------------------------------------------------------------------------
 
 const scrollAnima = document.querySelector('[data-anima="scroll"]');
-// Seleciona o elemento no documento com o atributo 'data-anima' igual a 'scroll' e armazena na variável 'scrollAnima'
-const metadewindow = window.innerHeight * 2.6;
+const scrolAnimaValue = Number.parseFloat(
+  scrollAnima.dataset.animaValue || 2.6
+);
+const metadewindow = window.innerHeight * scrolAnimaValue;
 // Calcula a altura da janela do navegador multiplicando a altura interna da janela pelo valor 2.6 e armazena em 'metadewindow'
 console.log(metadewindow);
 // Exibe o valor de 'metadewindow' no console
@@ -38,13 +46,13 @@ function animaScroll() {
 window.addEventListener("scroll", animaScroll);
 // Adiciona um ouvinte de evento de rolagem à janela do navegador que chama a função 'animaScroll' quando ocorre um evento de rolagem
 
-// Dark or light mode -----------------------------------------------------------------------------------
+// Dark or light mode
 const changeThemeBtn = document.querySelector("#change-theme");
 
 function toggleDarkMode() {
   document.body.classList.toggle("dark");
 }
-//load lught or dark mode
+//load light or dark mode
 function loadTheme() {
   const darkMode = localStorage.getItem("dark");
 
@@ -52,7 +60,6 @@ function loadTheme() {
     toggleDarkMode();
   }
 }
-
 loadTheme();
 
 changeThemeBtn.addEventListener("change", function () {
@@ -68,91 +75,49 @@ changeThemeBtn.addEventListener("change", function () {
 
 // Barra-pesquisa ---------------------------------------------------------------------------------------
 
-// $(document).ready(function () {
-//   // Quando o documento estiver completamente carregado
-//   $.getJSON("../assets/json/data.json", function (data) {
-//     // Faz uma requisição GET para o arquivo JSON e obtém os dados
-//     var items = data.items;
-//     // Armazena os itens do JSON na variável 'items'
-//     $("#pesquisa").autocomplete({
-//       // Aplica a função de autocomplete ao elemento com o ID 'pesquisa'
-//       source: items.map(function (item) {
-//         return item.title;
-//       }),
-//       // Define a fonte de sugestões para o autocomplete como os títulos dos itens
-//       select: function (event, ui) {
-//         var selectedItem = items.find(function (item) {
-//           return item.title === ui.item.value;
-//         });
-//         // Quando um item é selecionado no autocomplete, encontra o item correspondente
+$(document).ready(function () {
+  // Quando o documento estiver completamente carregado
+  $.getJSON("../assets/json/data.json", function (data) {
+    // Faz uma requisição GET para o arquivo JSON e obtém os dados
+    var items = data.items;
+    // Armazena os itens do JSON na variável 'items'
+    $("#pesquisa").autocomplete({
+      // Aplica a função de autocomplete ao elemento com o ID 'pesquisa'
+      source: items.map(function (item) {
+        return item.title;
+      }),
+      // Define a fonte de sugestões para o autocomplete como os títulos dos itens
+      select: function (event, ui) {
+        var selectedItem = items.find(function (item) {
+          return item.title === ui.item.value;
+        });
+        // Quando um item é selecionado no autocomplete, encontra o item correspondente
 
-//         // Abre o link do item selecionado em uma nova janela do navegador
-//         window.open(selectedItem.link);
-//       },
-//     });
-//   });
-// });
-
-// Carousel ---------------------------------------------------------------------------------------
-const carousel = document.querySelector(".carrosel-grid");
-const leftButton = document.getElementById("left");
-const rightButton = document.getElementById("right");
-
-let currentPosition = 0;
-const scrollAmount = 141.5; // Ajuste o valor para controlar o deslocamento dos itens
-
-function moveCarousel(direction) {
-  const maxPosition = carousel.scrollWidth - carousel.offsetWidth;
-
-  if (direction === "left") {
-    currentPosition -= scrollAmount;
-    if (currentPosition < 0) {
-      currentPosition = 0;
-    }
-  } else {
-    currentPosition += scrollAmount;
-    if (currentPosition > maxPosition) {
-      currentPosition = maxPosition;
-    }
-  }
-
-  carousel.scrollTo({
-    left: currentPosition,
-    behavior: "smooth",
+        // Abre o link do item selecionado em uma nova janela do navegador
+        window.open(selectedItem.link);
+      },
+    });
   });
-}
-
-leftButton.addEventListener("click", () => moveCarousel("left"));
-rightButton.addEventListener("click", () => moveCarousel("right"));
-
-function updateButtonVisibility() {
-  const maxPosition = carousel.scrollWidth - carousel.offsetWidth;
-
-  if (currentPosition === 0) {
-    leftButton.style.display = "none";
-  } else {
-    leftButton.style.display = "block";
-  }
-
-  if (currentPosition === maxPosition) {
-    rightButton.style.display = "none";
-  } else {
-    rightButton.style.display = "block";
-  }
-}
-
-leftButton.addEventListener("click", () => {
-  moveCarousel("left");
-  updateButtonVisibility();
 });
 
-rightButton.addEventListener("click", () => {
-  moveCarousel("right");
-  updateButtonVisibility();
-});
+//------------------------------------------------------------------------------------------------------------------------
 
-window.addEventListener("resize", () => {
-  updateButtonVisibility();
+document.addEventListener("DOMContentLoaded", function () {
+  const grid = document.querySelector(".grid");
+  const tipoComida = grid.dataset.tipoComida;
+  fetch("../assets/json/" + tipoComida + ".json")
+    .then((res) => res.json())
+    .then((data) => {
+      data.items.forEach((item) => {
+        const gridItem = document.createElement("div");
+        gridItem.classList.add("grid-item");
+        gridItem.innerHTML = `
+          <a href="${item.link}" target="_blank">
+          <img src="${item.image}" alt="${item.title}" class="item-image">
+          <h3 class="item-title">${item.title}</h3>
+          </a>
+          `;
+        grid.appendChild(gridItem);
+      });
+    });
 });
-
-updateButtonVisibility();
