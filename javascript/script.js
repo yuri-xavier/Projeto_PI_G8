@@ -1,3 +1,23 @@
+document.addEventListener("DOMContentLoaded", function () {
+  const grid = document.querySelector(".grid");
+  const tipoComida = grid.dataset.tipoComida;
+  fetch("../assets/json/" + tipoComida + ".json")
+    .then((res) => res.json())
+    .then((data) => {
+      data.items.forEach((item) => {
+        const gridItem = document.createElement("div");
+        gridItem.classList.add("grid-item");
+        gridItem.innerHTML = `
+          <a href="${item.link}" target="_blank">
+          <img src="${item.image}" alt="${item.title}" class="item-image">
+          <h3 class="item-title">${item.title}</h3>
+          </a>
+          `;
+        grid.appendChild(gridItem);
+      });
+    });
+});
+
 // MENU -------------------------------------------------------------------------------------------------
 
 const menu = document.querySelector(".menu");
@@ -98,26 +118,4 @@ $(document).ready(function () {
       },
     });
   });
-});
-
-//------------------------------------------------------------------------------------------------------------------------
-
-document.addEventListener("DOMContentLoaded", function () {
-  const grid = document.querySelector(".grid");
-  const tipoComida = grid.dataset.tipoComida;
-  fetch("../assets/json/" + tipoComida + ".json")
-    .then((res) => res.json())
-    .then((data) => {
-      data.items.forEach((item) => {
-        const gridItem = document.createElement("div");
-        gridItem.classList.add("grid-item");
-        gridItem.innerHTML = `
-          <a href="${item.link}" target="_blank">
-          <img src="${item.image}" alt="${item.title}" class="item-image">
-          <h3 class="item-title">${item.title}</h3>
-          </a>
-          `;
-        grid.appendChild(gridItem);
-      });
-    });
 });
