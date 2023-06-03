@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
   const grid = document.querySelector(".grid");
   const tipoComida = grid.dataset.tipoComida;
-  fetch("./assets/json/" + tipoComida + ".json")
+  fetch("../assets/json/" + tipoComida + ".json")
     .then((res) => res.json())
     .then((data) => {
       data.items.forEach((item) => {
