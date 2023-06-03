@@ -17,6 +17,8 @@
 }
 
 /* -------------------------------------------------------------------------- */
+/* Header */
+
 .navigation {
   width: 100%;
   height: 80px;
@@ -39,7 +41,6 @@
   width: 4.5rem;
   cursor: pointer;
 }
-
 .navigation ul {
   display: flex;
   align-items: center;
@@ -72,16 +73,16 @@
   width: 100px;
   background-color: var(--fundo);
   box-shadow: 0px 11px 20px 9px var(--shadow);
-  z-index: 2; /* teste */
+  z-index: 2;
 }
-
 .navigation ul li:hover ul {
-  /* display: block; */
-  display: inherit; /* teste */
+  display: inherit;
 }
-
 .navigation ul ul li a {
   display: block;
+}
+.scroll-lock {
+  overflow: hidden;
 }
 /* menu-bar */
 .menu {
@@ -103,41 +104,6 @@
 .menu .bar:nth-child(2) {
   background-color: var(--white);
 }
-
-/* -------------------------------------------------------------------------- */
-/* Barra-pesquisa */
-.search {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-}
-.pesquisa input {
-  height: 4vh;
-  margin-bottom: 10px;
-  border-radius: 20px;
-  padding: 5px;
-  width: 30%;
-  margin-top: 30px;
-  border-color: var(--hover);
-}
-.search .icon {
-  position: absolute;
-  right: 35.5rem;
-  top: 7rem;
-  height: 1.5rem;
-  width: 1.5rem;
-  text-align: center;
-  line-height: 3.4rem;
-  font-size: 1.2rem;
-  cursor: pointer;
-}
-.search .icon i {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
 /* -------------------------------------------------------------------------- */
 /* Botao-TOPO */
 
@@ -151,7 +117,6 @@
   transition: 0.6s all;
   color: var(--dark);
 }
-
 .show-button .topo {
   right: 20px;
   transition: 0.6s all;
@@ -160,60 +125,10 @@
   color: var(--hover);
   cursor: pointer;
 }
-/* -------------------------------------------------------------------------- */
-/* Criadores */
-
-.conteiner-card {
-  max-width: 1200px;
-  margin: auto;
-  padding: 1rem;
-  text-align: center;
-}
-.conteiner-card p {
-  padding: 1rem;
-}
-.card-wrapper {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 2.2rem;
-}
-.card {
-  background-color: var(--white);
-  border-radius: 5px;
-  box-shadow: 0 2px 5px var(--fundo);
-  overflow: hidden;
-  cursor: pointer;
-  transition: transform 0.3s;
-}
-
-.card i {
-  font-size: 25px;
-  margin-left: 10px;
-  color: var(--dark);
-}
-.card i:hover {
-  color: #ff0202;
-}
-.img-cri img {
-  max-width: 190px;
-  width: 100%;
-  height: 170px;
-  object-fit: cover;
-  margin-top: 5px;
-}
-.img-cri {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.link {
-  display: flex;
-  justify-content: center;
-  gap: 3rem;
-}
 
 /* -------------------------------------------------------------------------- */
 /* Estilizaçao pela tags-HTML */
+
 header {
   width: 100%;
 }
@@ -223,26 +138,11 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  /* width: 100vw; */
   height: 100vh;
 }
-body::-webkit-scrollbar {
-  width: 12px;
-}
-
-body::-webkit-scrollbar-track {
-  background: rgb(255, 255, 254); /*color of the tracking area */
-}
-
-body::-webkit-scrollbar-thumb {
-  background-color: var(--fundo); /* color of the scroll thumb */
-  border-radius: 20px; /* roundness of the scroll thumb */
-  border: 3px solid rgb(255, 255, 255); /* creates padding around scroll thumb */
-}
 main {
+  margin-top: 20px;
   width: 100%;
-  /* height: calc(100vh - 80px - 30px);
-  overflow: hidden; */
 }
 main h1 {
   display: flex;
@@ -258,17 +158,28 @@ main h2 {
 main p {
   text-align: center;
 }
+
+/* Barra de scroll */
+body::-webkit-scrollbar {
+  width: 12px;
+}
+body::-webkit-scrollbar-track {
+  background: rgb(255, 255, 254); /*color of the tracking area */
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: var(--fundo); /* color of the scroll thumb */
+  border-radius: 20px; /* roundness of the scroll thumb */
+  border: 3px solid rgb(255, 255, 255); /* creates padding around scroll thumb */
+}
 /* -------------------------------------------------------------------------- */
 /* Receitas */
+
 .receitas {
   max-width: 1200px;
   margin: auto;
   padding: 2rem;
   text-align: center;
-}
-.receitas p,
-h1 {
-  margin-bottom: 2rem;
 }
 .grid {
   display: grid;
@@ -298,49 +209,8 @@ h1 {
   color: #000000;
 }
 /* -------------------------------------------------------------------------- */
-/* Pagina-home */
-/* .card-videos {
-  display: flex;
-  gap: 5rem;
-  width: 100%;
-  height: 400px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: auto;
-}
-
-.container {
-  width: 100%;
-  margin: 20px;
-  display: grid;
-  grid-auto-flow: column;
-  justify-content: space-around;
-  align-items: center;
-  overflow-x: scroll;
-  flex-wrap: nowrap;
-  scroll-snap-type: x mandatory;
-  scroll-padding-left: 20px;
-  gap: 100px;
-}
-.videos {
-  display: flex;
-  flex-direction: column;
-  height: 300px;
-  width: 100%;
-  box-shadow: -1px 1px 20px 3px black;
-  scroll-snap-align: start;
-}
-.videos h2 {
-  font-size: 1.4rem;
-} */
-iframe {
-  width: 400px;
-  height: 300px;
-}
-
-/* -------------------------------------------------------------------------- */
 /* Footer */
+
 .rodape {
   display: flex;
   width: 100%;
@@ -349,8 +219,9 @@ iframe {
   align-items: center;
   justify-content: center;
   box-shadow: 0 0.1rem 0.5rem var(--dark);
-  /* margin-top: 140px; */
 }
+
+/* -------------------------------------------------------------------------- */
 
 @media (max-width: 785px) {
   .navigation {
@@ -379,6 +250,7 @@ iframe {
     background: var(--vinho);
     gap: -10px;
     transition: 0.3s;
+    z-index: 10000;
   }
   .nav-menu.ativo {
     right: 0;
@@ -388,27 +260,5 @@ iframe {
   }
   .grid {
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  }
-}
-@media (max-width: 600px) {
-  .conteiner-card {
-    padding: 2px;
-    width: 100vw;
-  }
-  .conteiner-card h2,
-  p {
-    margin: 10px;
-  }
-  .card-wrapper {
-    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
-  }
-  .card {
-    width: 100vw;
-  }
-  .rodape {
-    font-size: 12px;
-  }
-  .link {
-    gap: 1rem;
   }
 }
