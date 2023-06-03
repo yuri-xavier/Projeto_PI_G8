@@ -49,11 +49,11 @@
 }
 .carrosel-container i:first-child {
   left: 20px;
-  top: 10rem;
+  top: 11rem;
 }
 .carrosel-container i:last-child {
-  right: 20px;
-  top: 10rem;
+  right: 16.5px;
+  top: 11rem;
 }
 
 .carrosel-item:hover {
@@ -81,7 +81,7 @@
 .carrosel-grid-2 {
   display: grid;
   grid-auto-flow: column;
-  grid-auto-columns: calc((100% / 2) - 12px);
+  grid-auto-columns: calc((100% / 2) - 8px);
   gap: 1rem;
   overflow-x: auto;
   scroll-snap-type: x mandatory;

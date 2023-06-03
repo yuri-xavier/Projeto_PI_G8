@@ -5,7 +5,7 @@ input[type="checkbox"] {
 }
 html,
 body {
-  transition: 0.3s;
+  transition: 0.5s;
 }
 .bi {
   font-size: 1rem;
@@ -28,8 +28,6 @@ body {
 .dark .bi-moon {
   display: block;
 }
-
-/* ---------------------------------------------------------------------------------------------- */
 
 .dark h3 {
   color: aliceblue;

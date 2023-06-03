@@ -82,7 +82,7 @@ const carousel_2 = document.querySelector(".carrosel-grid-2");
 const leftButton_2 = document.getElementById("left-2");
 const rightButton_2 = document.getElementById("right-2");
 let currentPosition_2 = 0;
-let scrollAmount_2 = 141.5; // Valor padrão para telas maiores
+let scrollAmount_2 = 283; // Valor padrão para telas maiores
 
 function moveCarousel_2(direction_2) {
   const maxPosition_2 = carousel_2.scrollWidth - carousel_2.offsetWidth;
@@ -134,12 +134,24 @@ rightButton_2.addEventListener("click", () => {
 });
 
 function adjustScrollAmount_2() {
-  if (window.innerWidth < 768) {
+  if (window.innerWidth <= 320) {
     // Para telas menores, ajuste o scrollAmount_2
-    scrollAmount_2 = 153;
+    scrollAmount_2 = 125.7;
+  } else if (window.innerWidth <= 375) {
+    // Para telas menores, ajuste o scrollAmount_2
+    scrollAmount_2 = 153.5;
+  } else if (window.innerWidth <= 425) {
+    // Para telas menores, ajuste o scrollAmount_2
+    scrollAmount_2 = 178.7;
+  } else if (window.innerWidth <= 768) {
+    // Para telas menores, ajuste o scrollAmount_2
+    scrollAmount_2 = 176.8;
+  } else if (window.innerWidth <= 1024) {
+    // Para telas menores, ajuste o scrollAmount_2
+    scrollAmount_2 = 239;
   } else {
     // Para telas maiores, use o valor padrão
-    scrollAmount_2 = 141.5;
+    scrollAmount_2 = 283;
   }
 }
 
