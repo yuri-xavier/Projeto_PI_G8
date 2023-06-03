@@ -18,6 +18,12 @@
     <link rel="icon" type="image/png" href="../assets/img/logo.jpg" />
     <script src="../javascript/script.js" defer></script>
     <script src="../javascript/forms.js" defer></script>
+    <script src="https://code.jquery.com/jquery-1.9.1.js"></script>
+    <script src="https://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css"
+    />
     <title>Cadastre-se</title>
   </head>
   <body>
@@ -49,17 +55,30 @@
             </ul>
           </li>
           <li>
-            <a href="./login.html"> <i class="bx bx-user"></i></a>
+            <a href="./login.html"> <i class="bx bx-user-plus"></i></a>
           </li>
-
-          <i class="bx bx-search"></i>
-          <div>
-            <input type="checkbox" name="change-theme" id="change-theme" />
-            <label for="change-theme">
-              <i class="bi bi-sun"></i>
-              <i class="bi bi-moon"></i>
-            </label>
-          </div>
+          <li>
+            <div class="search-box">
+              <input
+                type="text"
+                id="pesquisa"
+                class="search-text"
+                placeholder="O que você quer comer hoje?"
+              />
+              <a class="search-btn">
+                <i class="bx bx-search"></i>
+              </a>
+            </div>
+          </li>
+          <li>
+            <div>
+              <input type="checkbox" name="change-theme" id="change-theme" />
+              <label for="change-theme">
+                <i class="bi bi-sun"></i>
+                <i class="bi bi-moon"></i>
+              </label>
+            </div>
+          </li>
         </ul>
         <div class="menu">
           <span class="bar"></span>

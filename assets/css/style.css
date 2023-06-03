@@ -70,7 +70,8 @@
 .navigation ul ul {
   display: none;
   position: absolute;
-  width: 100px;
+  width: 200px;
+  text-align: center;
   background-color: var(--fundo);
   box-shadow: 0px 11px 20px 9px var(--shadow);
   z-index: 2;
@@ -80,6 +81,9 @@
 }
 .navigation ul ul li a {
   display: block;
+}
+.nav-menu > li {
+  margin-right: 10px;
 }
 .scroll-lock {
   overflow: hidden;
@@ -108,21 +112,26 @@
 /* Botao-TOPO */
 
 .topo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: fixed;
   bottom: 20px;
   right: -500px;
-  height: 50px;
-  width: 50px;
-  font-size: 50px;
+  height: 45px;
+  width: 45px;
+  font-size: 35px;
   transition: 0.6s all;
   color: var(--dark);
+  background-color: #c5aeae;
+  border-radius: 30px;
 }
 .show-button .topo {
   right: 20px;
   transition: 0.6s all;
 }
 .topo:hover {
-  color: var(--hover);
+  color: var(--white);
   cursor: pointer;
 }
 
@@ -153,7 +162,7 @@ main h2 {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 10px;
+  margin-top: 20px;
 }
 main p {
   text-align: center;
@@ -180,6 +189,9 @@ body::-webkit-scrollbar-thumb {
   margin: auto;
   padding: 2rem;
   text-align: center;
+}
+.receitas p {
+  margin-bottom: 20px;
 }
 .grid {
   display: grid;
@@ -208,6 +220,38 @@ body::-webkit-scrollbar-thumb {
   text-align: center;
   color: #000000;
 }
+
+/* -------------------------------------------------------------------------- */
+/* Barra de pesquisa */
+
+.search-box {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.search-box .search-text {
+  background: none;
+  border: 0;
+  outline: 0;
+  font-size: 16px;
+  padding: 0;
+  width: 0;
+  transition: width 0.2s;
+}
+.search-box .search-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.search-box:hover .search-text {
+  width: 320px;
+}
+
 /* -------------------------------------------------------------------------- */
 /* Footer */
 
@@ -240,6 +284,8 @@ body::-webkit-scrollbar-thumb {
     transform: translateY(-8px) rotate(-45deg);
   }
   .nav-menu {
+    display: flex;
+    align-items: center;
     position: fixed;
     right: -100%;
     top: 70px;
