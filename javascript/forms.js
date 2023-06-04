@@ -15,7 +15,7 @@ form.addEventListener("submit", (event) => {
 
 // Função para verificar e aplicar a cor correta ao input
 function setError(index) {
-  campos[index].style.border = "2px solid #c63636";
+  campos[index].style.border = "3px solid #c63636";
   spans[index].style.display = "block";
 }
 function removeError(index) {

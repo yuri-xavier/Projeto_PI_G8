@@ -139,7 +139,7 @@ body {
 .envio input[type="submit"] {
   display: flex;
   justify-content: center;
-  background-color: #996515;
+  background-color: var(--fundo);
   border-radius: 20px;
   color: white;
   margin-top: 10px;
@@ -211,7 +211,7 @@ body {
 }
 
 .cadastro {
-  color: #996515;
+  color: var(--fundo);
   font-weight: bolder;
   text-decoration: solid;
 }
