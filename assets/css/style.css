@@ -150,7 +150,7 @@ body {
   height: 100vh;
 }
 main {
-  margin-top: 20px;
+  /* margin-top: 20px; */
   width: 100%;
 }
 main h1 {
@@ -264,137 +264,6 @@ body::-webkit-scrollbar-thumb {
   justify-content: center;
   box-shadow: 0 0.1rem 0.5rem var(--dark);
 }
-
-/* SLIDESHOW----------------------------------------*/
-.slider {
-  margin: 0 auto;
-  width: 140vh;
-  height: 45vh;
-  overflow: hidden;
-  box-sizing: border-box;
-  box-shadow: 0 5px 5px var(--dark);
-}
-
-.slides {
-  width: 400%;
-  height: 400px;
-  display: flex;
-}
-
-.slides input {
-  display: none;
-}
-
-.slide {
-  width: 25%;
-  position: relative;
-  transition: 2s;
-}
-
-.slide img {
-  width: 1010px;
-}
-
-.manual-navigation {
-  position: absolute;
-  width: 1000px;
-  margin-top: -120px;
-  display: flex;
-  justify-content: center;
-}
-
-.manual-btn {
-  border: 2px solid gray;
-  padding: 5px;
-  border-radius: 10px;
-  cursor: pointer;
-  transition: 1s;
-}
-
-.manual-btn:not(:last-child) {
-  margin-right: 40px;
-}
-
-.manual-btn:hover {
-  background-color: #fff;
-}
-
-#radio1:checked ~ .first {
-  margin-left: 0;
-}
-
-#radio2:checked ~ .first {
-  margin-left: -25%;
-}
-
-#radio3:checked ~ .first {
-  margin-left: -50%;
-}
-
-#radio4:checked ~ .first {
-  margin-left: -75%;
-}
-
-#radio5:checked ~ .first {
-  margin-left: -100%;
-}
-
-#radio6:checked ~ .first {
-  margin-left: -125%;
-}
-
-#radio7:checked ~ .first {
-  margin-left: -150%;
-}
-
-.navigation-auto div {
-  border: 2px solid #20a6ff;
-  padding: 5px;
-  border-radius: 10px;
-  cursor: pointer;
-  transition: 1s;
-}
-
-.navigation-auto {
-  position: absolute;
-  width: 1000px;
-  margin-top: 280px;
-  display: flex;
-  justify-content: center;
-}
-
-.navigation-auto div:not(:last-child) {
-  margin-right: 40px;
-}
-
-#radio1:checked ~ .navigation-auto .auto-btn1 {
-  background-color: blue;
-}
-
-#radio2:checked ~ .navigation-auto .auto-btn2 {
-  background-color: purple;
-}
-
-#radio3:checked ~ .navigation-auto .auto-btn3 {
-  background-color: brown;
-}
-
-#radio4:checked ~ .navigation-auto .auto-btn4 {
-  background-color: yellow;
-}
-
-#radio5:checked ~ .navigation-auto .auto-btn5 {
-  background-color: green;
-}
-
-#radio6:checked ~ .navigation-auto .auto-btn6 {
-  background-color: red;
-}
-
-#radio7:checked ~ .navigation-auto .auto-btn7 {
-  background-color: orange;
-}
-/*FIM SLIDESHOW*/
 
 /* -------------------------------------------------------------------------- */
 
