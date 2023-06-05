@@ -6,7 +6,7 @@
   align-items: center;
   width: 100%;
 }
-.pesquisa input {
+#search_bar input {
   height: 4vh;
   margin-bottom: 10px;
   border-radius: 20px;
