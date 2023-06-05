@@ -162,3 +162,57 @@ window.addEventListener("resize", () => {
 
 adjustScrollAmount_2();
 updateButtonVisibility_2();
+
+//-------------------------------------------------------------------------
+
+var slideIndex = 0;
+var slides = document.getElementsByClassName("slide");
+var dots = document.getElementsByClassName("dot");
+
+function showSlide() {
+  for (var i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  slides[slideIndex].style.display = "block";
+}
+
+function updateDots() {
+  for (var i = 0; i < dots.length; i++) {
+    dots[i].classList.remove("active");
+  }
+  dots[slideIndex].classList.add("active");
+}
+
+function goToSlide(index) {
+  slideIndex = index;
+  showSlide();
+  updateDots();
+}
+
+function nextSlide() {
+  slideIndex++;
+  if (slideIndex >= slides.length) {
+    slideIndex = 0;
+  }
+  showSlide();
+  updateDots();
+}
+
+function prevSlide() {
+  slideIndex--;
+  if (slideIndex < 0) {
+    slideIndex = slides.length - 1;
+  }
+  showSlide();
+  updateDots();
+}
+
+setInterval(nextSlide, 3000);
+
+showSlide();
+for (var i = 0; i < dots.length; i++) {
+  dots[i].addEventListener("click", function () {
+    var dotIndex = Array.prototype.indexOf.call(dots, this);
+    goToSlide(dotIndex);
+  });
+}
