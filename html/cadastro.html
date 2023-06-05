@@ -90,7 +90,7 @@
     <main>
       <section class="envio">
         <div class="formulario">
-          <form action="processar-cadastro.php" method="POST">
+          <form id="form" action="processar-cadastro.php" method="POST">
             <h1>Cadastre-se</h1>
             <label for="nome">Nome:</label>
             <input
@@ -113,6 +113,7 @@
               name="email"
               class="required"
               oninput="emailValidate()"
+              autocomplete="email"
             />
             <span class="span-required">Digite um email válido</span>
 
@@ -123,6 +124,7 @@
               name="senha"
               class="required"
               oninput="passwordValidate ()"
+              autocomplete="new-password"
             />
             <span class="span-required"
               >Digite uma senha com no mínimo 8 caracteres</span
@@ -131,10 +133,11 @@
             <label for="senha">Repetir senha:</label>
             <input
               type="password"
-              id="senha"
+              id="repetir-senha"
               name="senha"
               class="required"
               oninput="comparePassword ()"
+              autocomplete="new-password"
             />
             <span class="span-required">As senhas devem ser iguais</span>
 
