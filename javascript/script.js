@@ -49,25 +49,29 @@ changeThemeBtn.addEventListener("change", function () {
 
 $(document).ready(function () {
   // Quando o documento estiver completamente carregado
-  $.getJSON("../assets/json/data.json", function (data) {
-    // Faz uma requisição GET para o arquivo JSON e obtém os dados
-    var items = data.items;
-    // Armazena os itens do JSON na variável 'items'
-    $("#pesquisa").autocomplete({
-      // Aplica a função de autocomplete ao elemento com o ID 'pesquisa'
-      source: items.map(function (item) {
-        return item.title;
-      }),
-      // Define a fonte de sugestões para o autocomplete como os títulos dos itens
-      select: function (event, ui) {
-        var selectedItem = items.find(function (item) {
-          return item.title === ui.item.value;
-        });
-        // Quando um item é selecionado no autocomplete, encontra o item correspondente
+  $.getJSON(
+    "../assets/json/data.json",
+    "./assets/json/data.json",
+    function (data) {
+      // Faz uma requisição GET para o arquivo JSON e obtém os dados
+      var items = data.items;
+      // Armazena os itens do JSON na variável 'items'
+      $("#pesquisa").autocomplete({
+        // Aplica a função de autocomplete ao elemento com o ID 'pesquisa'
+        source: items.map(function (item) {
+          return item.title;
+        }),
+        // Define a fonte de sugestões para o autocomplete como os títulos dos itens
+        select: function (event, ui) {
+          var selectedItem = items.find(function (item) {
+            return item.title === ui.item.value;
+          });
+          // Quando um item é selecionado no autocomplete, encontra o item correspondente
 
-        // Abre o link do item selecionado em uma nova janela do navegador
-        window.open(selectedItem.link);
-      },
-    });
-  });
+          // Abre o link do item selecionado em uma nova janela do navegador
+          window.open(selectedItem.link);
+        },
+      });
+    }
+  );
 });

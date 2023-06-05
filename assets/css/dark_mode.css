@@ -45,3 +45,7 @@ body {
   background-color: #263238;
   transition: 0.3s;
 }
+.dark .carrosel-item,
+.dark .carrosel-2-item {
+  background-color: #263238;
+}
