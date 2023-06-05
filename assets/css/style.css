@@ -1,0 +1,311 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+* {
+  padding: 0%;
+  margin: 0%;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  text-decoration: none;
+}
+
+:root {
+  --shadow: #b92a06;
+  --hover: #fafaf9;
+  --white: #fcfcfc;
+  --dark: #000000;
+  --fundo: rgb(124, 17, 10);
+}
+
+/* -------------------------------------------------------------------------- */
+/* Header */
+
+.navigation {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 30px;
+  background-color: var(--fundo);
+  box-shadow: 6px 6px 20px 0px var(--shadow);
+  color: var(--white);
+}
+.navigation a {
+  color: var(--white);
+  font-weight: bold;
+}
+.navigation li a i {
+  font-size: 20px;
+}
+.navigation img {
+  width: 4.5rem;
+  cursor: pointer;
+}
+.navigation ul {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  list-style-type: none;
+  padding: 0;
+  background-color: var(--fundo);
+}
+.navigation ul li {
+  display: inline;
+  position: relative;
+}
+.navigation ul li a {
+  display: inline-block;
+  text-decoration: none;
+  padding: 10px;
+  transition: background 0.5s;
+}
+.navigation ul li a:hover {
+  color: var(--hover);
+  text-shadow: 1px 0px 20px rgb(247, 248, 247);
+  -webkit-transition: width 0.3s; /*Chrome*/
+  transition: width 0.5s;
+}
+
+/* Sub menu */
+.navigation ul ul {
+  display: none;
+  position: absolute;
+  width: 200px;
+  text-align: center;
+  background-color: var(--fundo);
+  box-shadow: 0px 11px 20px 9px var(--shadow);
+  z-index: 2;
+}
+.navigation ul li:hover ul {
+  display: inherit;
+}
+.navigation ul ul li a {
+  display: block;
+}
+.nav-menu > li {
+  margin-right: 10px;
+}
+.scroll-lock {
+  overflow: hidden;
+}
+/* menu-bar */
+.menu {
+  cursor: pointer;
+  display: none;
+}
+.menu .bar {
+  display: block;
+  width: 28px;
+  height: 3px;
+  border-radius: 3px;
+  margin: 5px auto;
+  transition: all 0.3s;
+}
+.menu .bar:nth-child(1),
+.menu .bar:nth-child(3) {
+  background-color: var(--white);
+}
+.menu .bar:nth-child(2) {
+  background-color: var(--white);
+}
+/* -------------------------------------------------------------------------- */
+/* Botao-TOPO */
+
+.topo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  bottom: 20px;
+  right: -500px;
+  height: 45px;
+  width: 45px;
+  font-size: 35px;
+  transition: 0.6s all;
+  color: var(--dark);
+  background-color: #c5aeae;
+  border-radius: 30px;
+}
+.show-button .topo {
+  right: 20px;
+  transition: 0.6s all;
+}
+.topo:hover {
+  color: var(--white);
+  cursor: pointer;
+}
+
+/* -------------------------------------------------------------------------- */
+/* Estilizaçao pela tags-HTML */
+
+header {
+  width: 100%;
+}
+body {
+  display: flex;
+  background-color: #dbcccc;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 100vh;
+}
+main {
+  width: 100%;
+}
+main h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+}
+main h2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+main p {
+  text-align: center;
+}
+
+/* Barra de scroll */
+body::-webkit-scrollbar {
+  width: 12px;
+}
+body::-webkit-scrollbar-track {
+  background: rgb(255, 255, 254); /*color of the tracking area */
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: var(--fundo); /* color of the scroll thumb */
+  border-radius: 20px; /* roundness of the scroll thumb */
+  border: 3px solid rgb(255, 255, 255); /* creates padding around scroll thumb */
+}
+/* -------------------------------------------------------------------------- */
+/* Receitas */
+
+.receitas {
+  max-width: 1200px;
+  margin: auto;
+  padding: 2rem;
+  text-align: center;
+}
+.receitas p {
+  margin-bottom: 20px;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+.grid-item {
+  background-color: var(--white);
+  border-radius: 5px;
+  box-shadow: 0 2px 5px var(--dark);
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+.grid-item:hover {
+  transform: translateY(-5px);
+}
+.item-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+.item-title {
+  font-size: 1rem;
+  padding: 1rem;
+  text-align: center;
+  color: #000000;
+}
+
+/* -------------------------------------------------------------------------- */
+/* Barra de pesquisa */
+
+.search-box {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.search-box .search-text {
+  background: none;
+  border: 0;
+  outline: 0;
+  font-size: 16px;
+  padding: 0;
+  width: 0;
+  transition: width 0.2s;
+  color: aliceblue;
+}
+.search-box .search-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.search-box:hover .search-text {
+  width: 320px;
+}
+
+/* -------------------------------------------------------------------------- */
+/* Footer */
+
+.rodape {
+  display: flex;
+  width: 100%;
+  height: 30px;
+  background: var(--cor-primaria);
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0.1rem 0.5rem var(--dark);
+}
+
+/* -------------------------------------------------------------------------- */
+
+@media (max-width: 785px) {
+  .navigation {
+    padding: 18px 20px;
+  }
+  .menu {
+    display: block;
+  }
+  .menu.ativo .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  .menu.ativo .bar:nth-child(2) {
+    opacity: 0;
+  }
+  .menu.ativo .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+  .nav-menu {
+    display: flex;
+    align-items: center;
+    position: fixed;
+    right: -100%;
+    top: 70px;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    flex-direction: column;
+    background: var(--vinho);
+    gap: -10px;
+    transition: 0.3s;
+    z-index: 10000;
+  }
+  .nav-menu.ativo {
+    right: 0;
+  }
+  .nav-item {
+    margin: 16px 0;
+  }
+  .grid {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+}

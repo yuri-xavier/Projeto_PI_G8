@@ -1,0 +1,51 @@
+/* Btn dark or light mode */
+
+input[type="checkbox"] {
+  display: none;
+}
+html,
+body {
+  transition: 0.5s;
+}
+.bi {
+  font-size: 1rem;
+  cursor: pointer;
+}
+.bi-moon {
+  display: none;
+}
+
+/* dark theme */
+
+.dark,
+.dark header {
+  background-color: #263238;
+  color: aliceblue;
+}
+.dark .bi-sun {
+  display: none;
+}
+.dark .bi-moon {
+  display: block;
+}
+
+.dark h3 {
+  color: aliceblue;
+}
+.dark .navigation {
+  background-color: #263238;
+}
+.dark .nav-menu {
+  background-color: #263238;
+}
+.dark .navigation ul ul {
+  background-color: #263238;
+}
+.dark .grid-item {
+  background-color: #263238;
+  transition: 0.3s;
+}
+.dark .carrosel-item,
+.dark .carrosel-2-item {
+  background-color: #263238;
+}
