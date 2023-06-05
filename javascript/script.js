@@ -47,7 +47,7 @@ $(document).ready(function () {
   // Quando o documento estiver completamente carregado
   $.getJSON(
     "../assets/json/data.json",
-    "./assets/json/data.json",
+    "assets/json/data.json",
     function (data) {
       // Faz uma requisição GET para o arquivo JSON e obtém os dados
       var items = data.items;
