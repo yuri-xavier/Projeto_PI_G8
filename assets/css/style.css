@@ -17,6 +17,8 @@
 }
 
 /* -------------------------------------------------------------------------- */
+/* Header */
+
 .navigation {
   width: 100%;
   height: 80px;
@@ -39,7 +41,6 @@
   width: 4.5rem;
   cursor: pointer;
 }
-
 .navigation ul {
   display: flex;
   align-items: center;
@@ -69,19 +70,23 @@
 .navigation ul ul {
   display: none;
   position: absolute;
-  width: 100px;
+  width: 200px;
+  text-align: center;
   background-color: var(--fundo);
   box-shadow: 0px 11px 20px 9px var(--shadow);
-  z-index: 2; /* teste */
+  z-index: 2;
 }
-
 .navigation ul li:hover ul {
-  /* display: block; */
-  display: inherit; /* teste */
+  display: inherit;
 }
-
 .navigation ul ul li a {
   display: block;
+}
+.nav-menu > li {
+  margin-right: 10px;
+}
+.scroll-lock {
+  overflow: hidden;
 }
 /* menu-bar */
 .menu {
@@ -103,117 +108,36 @@
 .menu .bar:nth-child(2) {
   background-color: var(--white);
 }
-
-/* -------------------------------------------------------------------------- */
-/* Barra-pesquisa */
-.search {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-}
-.pesquisa input {
-  height: 4vh;
-  margin-bottom: 10px;
-  border-radius: 20px;
-  padding: 5px;
-  width: 30%;
-  margin-top: 30px;
-  border-color: var(--hover);
-}
-.search .icon {
-  position: absolute;
-  right: 35.5rem;
-  top: 7rem;
-  height: 1.5rem;
-  width: 1.5rem;
-  text-align: center;
-  line-height: 3.4rem;
-  font-size: 1.2rem;
-  cursor: pointer;
-}
-.search .icon i {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
 /* -------------------------------------------------------------------------- */
 /* Botao-TOPO */
 
 .topo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: fixed;
   bottom: 20px;
   right: -500px;
-  height: 50px;
-  width: 50px;
-  font-size: 50px;
+  height: 45px;
+  width: 45px;
+  font-size: 35px;
   transition: 0.6s all;
   color: var(--dark);
+  background-color: #c5aeae;
+  border-radius: 30px;
 }
-
 .show-button .topo {
   right: 20px;
   transition: 0.6s all;
 }
 .topo:hover {
-  color: var(--hover);
+  color: var(--white);
   cursor: pointer;
-}
-/* -------------------------------------------------------------------------- */
-/* Criadores */
-
-.conteiner-card {
-  max-width: 1200px;
-  margin: auto;
-  padding: 1rem;
-  text-align: center;
-}
-.conteiner-card p {
-  padding: 1rem;
-}
-.card-wrapper {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 2.2rem;
-}
-.card {
-  background-color: var(--white);
-  border-radius: 5px;
-  box-shadow: 0 2px 5px var(--fundo);
-  overflow: hidden;
-  cursor: pointer;
-  transition: transform 0.3s;
-}
-
-.card i {
-  font-size: 25px;
-  margin-left: 10px;
-  color: var(--dark);
-}
-.card i:hover {
-  color: #ff0202;
-}
-.img-cri img {
-  max-width: 190px;
-  width: 100%;
-  height: 170px;
-  object-fit: cover;
-  margin-top: 5px;
-}
-.img-cri {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.link {
-  display: flex;
-  justify-content: center;
-  gap: 3rem;
 }
 
 /* -------------------------------------------------------------------------- */
 /* Estilizaçao pela tags-HTML */
+
 header {
   width: 100%;
 }
@@ -223,27 +147,11 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  /* width: 100vw; */
   height: 100vh;
 }
-body::-webkit-scrollbar {
-  width: 12px;
-}
-
-body::-webkit-scrollbar-track {
-  background: rgb(255, 255, 254); /*color of the tracking area */
-}
-
-body::-webkit-scrollbar-thumb {
-  background-color: var(--fundo); /* color of the scroll thumb */
-  border-radius: 20px; /* roundness of the scroll thumb */
-  border: 3px solid rgb(255, 255, 255); /* creates padding around scroll thumb */
-}
 main {
+  margin-top: 20px;
   width: 100%;
-  background-color: ;
-  /* height: calc(100vh - 80px - 30px);
-  overflow: hidden; */
 }
 main h1 {
   display: flex;
@@ -254,22 +162,36 @@ main h2 {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 10px;
+  margin-top: 20px;
 }
 main p {
   text-align: center;
 }
+
+/* Barra de scroll */
+body::-webkit-scrollbar {
+  width: 12px;
+}
+body::-webkit-scrollbar-track {
+  background: rgb(255, 255, 254); /*color of the tracking area */
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: var(--fundo); /* color of the scroll thumb */
+  border-radius: 20px; /* roundness of the scroll thumb */
+  border: 3px solid rgb(255, 255, 255); /* creates padding around scroll thumb */
+}
 /* -------------------------------------------------------------------------- */
 /* Receitas */
+
 .receitas {
   max-width: 1200px;
   margin: auto;
   padding: 2rem;
   text-align: center;
 }
-.receitas p,
-h1 {
-  margin-bottom: 2rem;
+.receitas p {
+  margin-bottom: 20px;
 }
 .grid {
   display: grid;
@@ -298,50 +220,41 @@ h1 {
   text-align: center;
   color: #000000;
 }
+
 /* -------------------------------------------------------------------------- */
-/* Pagina-home */
-/* .card-videos {
+/* Barra de pesquisa */
+
+.search-box {
+  position: relative;
   display: flex;
-  gap: 5rem;
-  width: 100%;
-  height: 400px;
+  align-items: center;
+}
+
+.search-box .search-text {
+  background: none;
+  border: 0;
+  outline: 0;
+  font-size: 16px;
+  padding: 0;
+  width: 0;
+  transition: width 0.2s;
+}
+.search-box .search-btn {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: auto;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
 }
-
-.container {
-  width: 100%;
-  margin: 20px;
-  display: grid;
-  grid-auto-flow: column;
-  justify-content: space-around;
-  align-items: center;
-  overflow-x: scroll;
-  flex-wrap: nowrap;
-  scroll-snap-type: x mandatory;
-  scroll-padding-left: 20px;
-  gap: 100px;
-}
-.videos {
-  display: flex;
-  flex-direction: column;
-  height: 300px;
-  width: 100%;
-  box-shadow: -1px 1px 20px 3px black;
-  scroll-snap-align: start;
-}
-.videos h2 {
-  font-size: 1.4rem;
-} */
-iframe {
-  width: 400px;
-  height: 300px;
+.search-box:hover .search-text {
+  width: 320px;
 }
 
 /* -------------------------------------------------------------------------- */
 /* Footer */
+
 .rodape {
   display: flex;
   width: 100%;
@@ -350,8 +263,140 @@ iframe {
   align-items: center;
   justify-content: center;
   box-shadow: 0 0.1rem 0.5rem var(--dark);
-  /* margin-top: 140px; */
 }
+
+/* SLIDESHOW----------------------------------------*/
+.slider {
+  margin: 0 auto;
+  width: 140vh;
+  height: 45vh;
+  overflow: hidden;
+  box-sizing: border-box;
+  box-shadow: 0 5px 5px var(--dark);
+}
+
+.slides {
+  width: 400%;
+  height: 400px;
+  display: flex;
+}
+
+.slides input {
+  display: none;
+}
+
+.slide {
+  width: 25%;
+  position: relative;
+  transition: 2s;
+}
+
+.slide img {
+  width: 1010px;
+}
+
+.manual-navigation {
+  position: absolute;
+  width: 1000px;
+  margin-top: -120px;
+  display: flex;
+  justify-content: center;
+}
+
+.manual-btn {
+  border: 2px solid gray;
+  padding: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 1s;
+}
+
+.manual-btn:not(:last-child) {
+  margin-right: 40px;
+}
+
+.manual-btn:hover {
+  background-color: #fff;
+}
+
+#radio1:checked ~ .first {
+  margin-left: 0;
+}
+
+#radio2:checked ~ .first {
+  margin-left: -25%;
+}
+
+#radio3:checked ~ .first {
+  margin-left: -50%;
+}
+
+#radio4:checked ~ .first {
+  margin-left: -75%;
+}
+
+#radio5:checked ~ .first {
+  margin-left: -100%;
+}
+
+#radio6:checked ~ .first {
+  margin-left: -125%;
+}
+
+#radio7:checked ~ .first {
+  margin-left: -150%;
+}
+
+.navigation-auto div {
+  border: 2px solid #20a6ff;
+  padding: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 1s;
+}
+
+.navigation-auto {
+  position: absolute;
+  width: 1000px;
+  margin-top: 280px;
+  display: flex;
+  justify-content: center;
+}
+
+.navigation-auto div:not(:last-child) {
+  margin-right: 40px;
+}
+
+#radio1:checked ~ .navigation-auto .auto-btn1 {
+  background-color: blue;
+}
+
+#radio2:checked ~ .navigation-auto .auto-btn2 {
+  background-color: purple;
+}
+
+#radio3:checked ~ .navigation-auto .auto-btn3 {
+  background-color: brown;
+}
+
+#radio4:checked ~ .navigation-auto .auto-btn4 {
+  background-color: yellow;
+}
+
+#radio5:checked ~ .navigation-auto .auto-btn5 {
+  background-color: green;
+}
+
+#radio6:checked ~ .navigation-auto .auto-btn6 {
+  background-color: red;
+}
+
+#radio7:checked ~ .navigation-auto .auto-btn7 {
+  background-color: orange;
+}
+/*FIM SLIDESHOW*/
+
+/* -------------------------------------------------------------------------- */
 
 @media (max-width: 785px) {
   .navigation {
@@ -370,6 +415,8 @@ iframe {
     transform: translateY(-8px) rotate(-45deg);
   }
   .nav-menu {
+    display: flex;
+    align-items: center;
     position: fixed;
     right: -100%;
     top: 70px;
@@ -380,6 +427,7 @@ iframe {
     background: var(--vinho);
     gap: -10px;
     transition: 0.3s;
+    z-index: 10000;
   }
   .nav-menu.ativo {
     right: 0;
@@ -389,27 +437,5 @@ iframe {
   }
   .grid {
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  }
-}
-@media (max-width: 600px) {
-  .conteiner-card {
-    padding: 2px;
-    width: 100vw;
-  }
-  .conteiner-card h2,
-  p {
-    margin: 10px;
-  }
-  .card-wrapper {
-    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
-  }
-  .card {
-    width: 100vw;
-  }
-  .rodape {
-    font-size: 12px;
-  }
-  .link {
-    gap: 1rem;
   }
 }

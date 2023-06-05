@@ -8,11 +8,22 @@
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    />
     <link rel="stylesheet" href="../assets/css/style.css" />
     <link rel="stylesheet" href="../assets/css/form.css" />
+    <link rel="stylesheet" href="../assets/css/dark_mode.css" />
+    <link rel="icon" type="image/png" href="../assets/img/logo.jpg" />
     <script src="../javascript/script.js" defer></script>
     <script src="../javascript/forms.js" defer></script>
-    <link rel="icon" type="image/png" href="../assets/img/logo.jpg" />
+    <script src="https://code.jquery.com/jquery-1.9.1.js"></script>
+    <script src="https://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css"
+    />
     <title>Login</title>
   </head>
   <body>
@@ -28,28 +39,49 @@
             <a href="#">Receita</a>
             <ul>
               <li class="nav-item">
-                <a href="receitas_massas.html">Massas</a>
+                <a href="./receitas_massas.html">Massas</a>
               </li>
               <li class="nav-item">
-                <a href="receitas_salgados.html">Salgados</a>
+                <a href="./receitas_salgados.html">Salgados</a>
               </li>
               <li class="nav-item">
-                <a href="receitas_drink.html">Drinks</a>
+                <a href="./receitas_drink.html">Drinks</a>
               </li>
               <li class="nav-item">
-                <a href="receitas_doces.html">Doces</a>
+                <a href="./receitas_doces.html">Doces</a>
               </li>
               <li class="nav-item">
-                <a href="/assets/HTML/receitas_veganas.html">Veganas</a>
+                <a href="./receitas_veganas.html">Veganas</a>
               </li>
             </ul>
           </li>
           <li>
             <a href="login.html">
-              <i class="bx bx-user"></i>
+              <i class="bx bx-user-plus"></i>
             </a>
           </li>
-          <i class="bx bx-search"></i>
+          <li>
+            <div class="search-box">
+              <input
+                type="text"
+                id="pesquisa"
+                class="search-text"
+                placeholder="O que você quer comer hoje?"
+              />
+              <a class="search-btn">
+                <i class="bx bx-search"></i>
+              </a>
+            </div>
+          </li>
+          <li>
+            <div>
+              <input type="checkbox" name="change-theme" id="change-theme" />
+              <label for="change-theme">
+                <i class="bi bi-sun"></i>
+                <i class="bi bi-moon"></i>
+              </label>
+            </div>
+          </li>
         </ul>
 
         <div class="menu">

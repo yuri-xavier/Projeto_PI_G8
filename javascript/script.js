@@ -6,35 +6,40 @@ const NavMenu = document.querySelector(".nav-menu");
 menu.addEventListener("click", () => {
   menu.classList.toggle("ativo");
   NavMenu.classList.toggle("ativo");
+  document.body.classList.toggle("scroll-lock");
+  window.scroll({
+    top: 0,
+    left: 0,
+    behavior: "smooth",
+  });
 });
 
-// scroll-----------------------------------------------------------------------------------------------
+//Dark-mode -----------------------------------------------------------------------------------------------
+const changeThemeBtn = document.querySelector("#change-theme");
+// Toggle dark mode
+function toggleDarkMode() {
+  document.body.classList.toggle("dark");
+}
+// Load light or dark mode
+function loadTheme() {
+  const darkMode = localStorage.getItem("dark");
 
-const scrollAnima = document.querySelector('[data-anima="scroll"]');
-// Seleciona o elemento no documento com o atributo 'data-anima' igual a 'scroll' e armazena na variável 'scrollAnima'
-const metadewindow = window.innerHeight * 2.6;
-// Calcula a altura da janela do navegador multiplicando a altura interna da janela pelo valor 2.6 e armazena em 'metadewindow'
-console.log(metadewindow);
-// Exibe o valor de 'metadewindow' no console
-function animaScroll() {
-  // Declara uma função chamada 'animaScroll'
-  const topoItem = scrollAnima.getBoundingClientRect().top;
-  // Obtém a posição do elemento 'scrollAnima' em relação à janela do navegador e armazena na variável 'topoItem'
-  const ItemVisivel = topoItem - metadewindow < 0;
-  // Verifica se o elemento está visível na tela comparando a posição do topo do elemento com 'metadewindow'
-  if (ItemVisivel) {
-    // Se o elemento estiver visível
-    scrollAnima.classList.add("show-button");
-    // Adiciona a classe 'show-button' ao elemento 'scrollAnima'
-  } else {
-    // Caso contrário (elemento não está visível)
-    scrollAnima.classList.remove("show-button");
-    // Remove a classe 'show-button' do elemento 'scrollAnima'
+  if (darkMode) {
+    toggleDarkMode();
   }
 }
+loadTheme();
 
-window.addEventListener("scroll", animaScroll);
-// Adiciona um ouvinte de evento de rolagem à janela do navegador que chama a função 'animaScroll' quando ocorre um evento de rolagem
+changeThemeBtn.addEventListener("change", function () {
+  toggleDarkMode();
+
+  // Save or remove dark mode from localStorage
+  localStorage.removeItem("dark");
+
+  if (document.body.classList.contains("dark")) {
+    localStorage.setItem("dark", 1);
+  }
+});
 
 // Barra-pesquisa ---------------------------------------------------------------------------------------
 
@@ -62,47 +67,3 @@ $(document).ready(function () {
     });
   });
 });
-
-// Barra-pesquisa Java-Script---------------------------------------------------------------------------------------
-
-// document.addEventListener("DOMContentLoaded", function () {
-//   // When the document is fully loaded
-//   fetch("../assets/json/data.json")
-//     .then((response) => response.json())
-//     .then((data) => {
-//       var items = data.items;
-//       // Store the items from the JSON in the 'items' variable
-
-//       document.getElementById("pesquisa").addEventListener("input", function () {
-//         var inputValue = this.value;
-//         var suggestions = items
-//           .filter(function (item) {
-//             return item.title.toLowerCase().includes(inputValue.toLowerCase());
-//           })
-//           .map(function (item) {
-//             return item.title;
-//           });
-
-//         autocomplete(suggestions);
-//       });
-
-//       function autocomplete(suggestions) {
-//         var autocompleteContainer = document.getElementById("autocomplete-container");
-//         autocompleteContainer.innerHTML = "";
-
-//         suggestions.forEach(function (suggestion) {
-//           var suggestionElement = document.createElement("div");
-//           suggestionElement.textContent = suggestion;
-//           suggestionElement.addEventListener("click", function () {
-//             var selectedItem = items.find(function (item) {
-//               return item.title === suggestion;
-//             });
-
-//             window.open(selectedItem.link);
-//           });
-
-//           autocompleteContainer.appendChild(suggestionElement);
-//         });
-//       }
-//     });
-// });
