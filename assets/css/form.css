@@ -20,11 +20,7 @@ body {
 }
 .span-required {
   display: none;
-<<<<<<< HEAD
  text-align: left;  /* TESTE!!!! (RETIREI DO .envio form e adicionei aqui) */
-=======
-  text-align: left;
->>>>>>> dbbf0316d9ae5e34e7e761cf89de1da9bc712c80
   font-size: 12px;
   margin-bottom: 1rem;
   color: red;
@@ -64,11 +60,7 @@ body {
   }
 }
 
-<<<<<<< HEAD
 @keyframes changeBackgroundDark  {
-=======
-@keyframes changeBackgroundDark {
->>>>>>> dbbf0316d9ae5e34e7e761cf89de1da9bc712c80
   0% {
     background-image: url(../img/img1-dark.jpg);
     width: 100%;
@@ -85,11 +77,7 @@ body {
     height: 100vh;
   }
   60% {
-<<<<<<< HEAD
     background-image: url(../img/img4-dark.jpg);
-=======
-    background-image: url(../img/img5-dark.jpg);
->>>>>>> dbbf0316d9ae5e34e7e761cf89de1da9bc712c80
     width: 100%;
     height: 100vh;
   }
@@ -103,11 +91,7 @@ body {
     width: 100%;
     height: 100vh;
   }
-<<<<<<< HEAD
 } 
-=======
-}
->>>>>>> dbbf0316d9ae5e34e7e761cf89de1da9bc712c80
 
 .envio form {
   /* text-align: left; TESTE !!!!!!*/
@@ -138,15 +122,9 @@ body {
 
 .envio label {
   display: block;
-<<<<<<< HEAD
    text-align: left; /*MUDANÇA:pq tinha ficado centralizado qdo mudei o .emvio */
   margin-top: 5px; /*MUDANÇA: pra distanciar um pouco o texto senha do input */
   margin-bottom: 5px; /*MUDANÇA: diminui pq coloquei o margin-top */
-=======
-  text-align: left;
-  margin-top: 5px;
-  margin-bottom: 5px;
->>>>>>> dbbf0316d9ae5e34e7e761cf89de1da9bc712c80
   font-weight: bold;
 }
 
@@ -228,6 +206,7 @@ body {
 
 .texto {
   line-height: 20px;
+  /* font-family: Poppins, Arial, sans-serif; */
   color: #000;
 }
 
@@ -246,25 +225,14 @@ body {
   fill: #fafafa;
 }
 
-<<<<<<< HEAD
 /* teste esqueceu sua senha ATENÇÃO A ESTILIZAÇÃO DE COR E TAMANHO*/ 
-=======
-/* teste esqueceu sua senha ATENÇÃO A ESTILIZAÇÃO DE COR E TAMANHO*/
->>>>>>> dbbf0316d9ae5e34e7e761cf89de1da9bc712c80
 .hidden {
   display: none;
   font-size: 12px;
   color: black;
   text-decoration: solid;
 }
-<<<<<<< HEAD
 .hidden a{
   outline-width: 100px;
   cursor: pointer;
 }
-=======
-.hidden a {
-  outline-width: 100px;
-  cursor: pointer;
-}
->>>>>>> dbbf0316d9ae5e34e7e761cf89de1da9bc712c80

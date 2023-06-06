@@ -72,3 +72,30 @@ function passwordValidate2() {
     removeError(1);
   }
 }
+
+//Validação do esqueceu sua senha
+let failedAttempts = 0;
+
+document.getElementById('form').addEventListener('submit', function(e) {
+  e.preventDefault(); // Impede o envio do formulário
+
+  let email2 = document.getElementById('email').value;
+  let password2 = document.getElementById('senha').value;
+
+  if (email2 === 'user@example.com' && password2 === 'senha123') {
+    // Login bem-sucedido, redirecionar o usuário para a página principal, YURIII VER O CAMINHO SE TÁ CORRETO
+    removeError(1);
+    window.location.href = "../index.html";
+  } else {
+    // Aumentar o número de tentativas mal sucedidas
+    failedAttempts++;
+
+    if (failedAttempts === 2) {
+      // Mostrar o link "Esqueceu sua senha?" após DUAS tentativas mal sucedidas
+      document.getElementById('forgot-password-link').classList.remove('hidden');
+    } else {
+      // Exibir uma mensagem de erro genérica
+      alert('Email ou senha inválidos. Tente novamente.');
+    }
+  }
+});
