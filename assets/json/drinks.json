@@ -1,0 +1,112 @@
+{
+    "items": [
+        {
+            "title": "Caipirinha de Álcool",
+            "image": "https://receitinhas.com.br/wp-content/uploads/2022/12/Caipirinha-sem-alcool-1-730x365.png",
+            "link": "https://receitinhas.com.br/receita/caipirinha-sem-alcool/"
+        },{
+            "title": "Coquetel de Frutas - Sem Álcool",
+            "image": "https://img.cybercook.com.br/receitas/501/coquetel-de-frutas-sem-alcool-1-840x480.jpeg?q=75",
+            "link": "https://cybercook.com.br/receitas/bebidas/receita-de-coquetel-de-frutas-sem-alcool-123501"
+        },
+        {
+            "title": "Caipirinha Santa - Sem Álcool",
+            "image": "https://media.gazetadopovo.com.br/bomgourmet/2015/02/caipirinha-santa-4a6c8780.jpg",
+            "link": "https://www.gazetadopovo.com.br/bomgourmet/receitas-pratos/caipira-santa-sem-alcool/"
+        },{
+            "title": "Suco Tropical",
+            "image": "https://www.anamariabrogui.com.br/assets/uploads/receitas/fotos/usuario-3282-a3cfbaa5d698869f039673f2c0e569eb.jpg",
+            "link": "https://www.anamariabrogui.com.br/receita/suco-tropical-315176"
+        },
+        {
+            "title": "Suco Energético de Laranja e Cenoura",
+            "image": "https://simoesfilhoonline.com.br/wp-content/uploads/2020/06/09.jpg",
+            "link": "https://simoesfilhoonline.com.br/receita-suco-energetico-laranja-cenoura-facil-fazer/"
+        },{
+            "title": "Suco Energérico de Beterraba",
+            "image": "https://storage.googleapis.com/imagens_videos_gou_cooking_prod/production/cooking/cropped_temp_161492968352161975f2c039.11072060_.jpg",
+            "link": "https://tanamesa.com/receita/suco-energetico-paula-rizkallah/"
+        },
+        {
+            "title": "Shake de Açaí Banana e Morango",
+            "image": "https://claudia.abril.com.br/wp-content/uploads/2020/02/shake-de-accca7ai.jpg?quality=85",
+            "link": "https://claudia.abril.com.br/receitas/shake-proteico-de-acai-morango-e-banana"
+        },{
+            "title": "Shake de Fruta Vermelhas",
+            "image": "https://www.comidaereceitas.com.br/wp-content/uploads/2014/09/shake_frutas_vermelhas.jpg",
+            "link": "https://www.comidaereceitas.com.br/bebidas-e-sucos/shake-de-frutas-vermelhas.html"
+        },
+        {
+            "title": "Drink Tropical Sunset",
+            "image": "https://www.comidaereceitas.com.br/wp-content/uploads/2021/11/tropical_sunset.jpg",
+            "link": "https://www.comidaereceitas.com.br/bebidas-e-sucos/drink-tropical-sunset.html"
+        },{
+            "title": "Drinkolé de Maracujá",
+            "image": "https://www.anamariabrogui.com.br/assets/uploads/receitas/fotos/usuario-2474-f859f9a7e96cad5dad8a786e5a212565.jpg",
+            "link": "https://www.anamariabrogui.com.br/receita/drinkole-de-maracuja-f10172"
+        },
+        {
+            "title": "Drink O Mago",
+            "image": "https://claudia.abril.com.br/wp-content/uploads/2023/04/RECEBER-OFELIA4.jpg?quality=85",
+            "link": "https://claudia.abril.com.br/receitas/drinque-o-mago/"
+        },{
+            "title": "Caipirinha Canarinho",
+            "image": "https://www.anamariabrogui.com.br/assets/uploads/receitas/fotos/usuario-2168-6d19a681cc28f071994e0f982daeb1ba.jpg",
+            "link": "https://www.anamariabrogui.com.br/receita/receita-de-caipirinha-canarinho-d16488"
+        },
+        {
+            "title": "Bice Colada",
+            "image": "https://www.anamariabrogui.com.br/assets/uploads/receitas/fotos/usuario-1568-abd9e1a8bf8990684a05e30853bc146f.jpg",
+            "link": "https://www.anamariabrogui.com.br/receita/bice-colada-88486"
+        },{
+            "title": "Drink Tropical de Jambu",
+            "image": "https://simoesfilhoonline.com.br/wp-content/uploads/2020/06/09.jpg",
+            "link": "https://www.segs.com.br/mais/receitas/353534-receita-drink-tropical-jambu"
+        },
+        {
+            "title": "Drink de Gin, Hibisco e Limão Siciliano",
+            "image": "https://blog.mariafilo.com.br/wp-content/uploads/2019/11/28-11-drink.jpg",
+            "link": "https://blog.mariafilo.com.br/receita-com-drink-com-gin/"
+        },{
+            "title": "Drink com Vodka, Frutas e Manjericão",
+            "image": "https://s2.glbimg.com/pKqyMYrx6c9YxxMh-x2GKh335VY=/620x455/e.glbimg.com/og/ed/f/original/2019/10/22/tamz_photography_knr_living_room_new_drinks_june-6_2019-18.jpg",
+            "link": "https://revistacasaejardim.globo.com/Casa-e-Comida/Receitas/Drinques/noticia/2019/10/drink-com-vodka-frutas-e-manjericao-e-ideal-para-o-verao.html"
+        },
+        {
+            "title": "Sangria de Vinho Tinto",
+            "image": "https://www.receitadevovo.com.br/_next/image?url=https%3A%2F%2Fd2qcpt1idvpipw.cloudfront.net%2Frecipes%2F2020%2F10%2Fsangria-de-vinho-tinto.jpg&w=900&q=75",
+            "link": "https://www.receitadevovo.com.br/receitas/sangria-de-vinho-tinto"
+        },{
+            "title": "Espanhola de Maracujá",
+            "image": "https://blogger.googleusercontent.com/img/a/AVvXsEj_9nHuyu1tWO_CL_ltUXDVtcjPxwr4uq0eDhbIdUMpbf0nsSMn3_bhTg_V9MFTXfQcz27lFlVBYtdP5KKet-wLrSjWvV9Q5b99zSvMLfiaJHZQFN8fhuDoOy30dr1e4SHyxhhwp7njUZTPo-hwbHR9Fn_h8DI6QQroqIHRza09BT58Et0QaKofnQhh=w400-h400",
+            "link": "http://www.cozinhadaanita.com.br/2022/01/espanhola-de-maracuja.html"
+        },
+        {
+            "title": "Coquetel de Champanhe e Morango",
+            "image": "https://www.anamariabrogui.com.br/assets/uploads/receitas/fotos/usuario-1714-53acec579f18e8472d1daf5bee1ed69d.jpg",
+            "link": "https://www.anamariabrogui.com.br/receita/coquetel-de-champanhe-e-morangos-46346"
+        },{
+            "title": "Kiwi-Delícia",
+            "image": "https://www.anamariabrogui.com.br/assets/uploads/receitas/fotos/usuario-2474-450a273d02758335f0b4ac27a32bbf49.jpg",
+            "link": "https://www.anamariabrogui.com.br/receita/kiwi-delicia-a10188"
+        },
+        {
+            "title": "Double Bull",
+            "image": "https://www.anamariabrogui.com.br/assets/uploads/receitas/fotos/usuario-2474-67f2432ec9139d59f7df7180ad2a4b6c.jpg",
+            "link": "https://www.anamariabrogui.com.br/receita/double-bull-811556"
+        },{
+            "title": "Drink de Chocolate Quente com Vodka",
+            "image": "https://www.comidaereceitas.com.br/wp-content/uploads/2020/07/chocolate_vodka-780x480.jpg",
+            "link": "https://www.comidaereceitas.com.br/bebidas-e-sucos/chocolate-quente-com-vodka.html"
+        },
+        {
+            "title": "Mexican Boy",
+            "image": "https://s2.glbimg.com/2D_mZAdwcAkA2M_Ic6JS53BM8Eo=/smart/e.glbimg.com/og/ed/f/original/2017/01/31/mexican-boy-drink.jpg",
+            "link": "https://vogue.globo.com/lifestyle/noticia/2017/02/drink-com-tequila-aprenda-receita-do-mexican-boy.html"
+        },{
+            "title": "Dry Martini",
+            "image": "https://www.receiteria.com.br/wp-content/uploads/dry-martini-730x450.png.webp",
+            "link": "https://www.receiteria.com.br/receita/dry-martini/"
+        }
+    ]
+}
