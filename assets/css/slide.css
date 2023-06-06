@@ -1,5 +1,9 @@
 .slider {
+<<<<<<< HEAD
   width: 100%;
+=======
+  max-width: 1200px;
+>>>>>>> 9076bdd419377e69c34eeaa8a3c6e5b3ed3e647e
   margin: auto;
   text-align: center;
   position: relative;
@@ -22,6 +26,11 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+<<<<<<< HEAD
+=======
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+>>>>>>> 9076bdd419377e69c34eeaa8a3c6e5b3ed3e647e
 }
 
 .navigation-dots {

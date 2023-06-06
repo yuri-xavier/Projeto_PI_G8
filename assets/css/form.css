@@ -20,11 +20,13 @@ body {
 }
 .span-required {
   display: none;
+  text-align: left;
   font-size: 12px;
   margin-bottom: 1rem;
   color: red;
   font-weight: 600;
 }
+
 @keyframes changeBackground {
   0% {
     background-image: url(../img/img1.jpg);
@@ -57,9 +59,8 @@ body {
     height: 100vh;
   }
 }
-
 .envio form {
-  text-align: left;
+  /* text-align: left; TESTE !!!!!!*/
   width: 20rem;
   background: rgba(252, 250, 250, 0.479);
   padding: 1rem;
@@ -87,7 +88,9 @@ body {
 
 .envio label {
   display: block;
-  margin-bottom: 10px;
+  text-align: left;
+  margin-top: 5px;
+  margin-bottom: 5px;
   font-weight: bold;
 }
 
@@ -102,7 +105,7 @@ body {
 .envio input[type="submit"] {
   display: flex;
   justify-content: center;
-  background-color: #996515;
+  background-color: var(--fundo);
   border-radius: 20px;
   color: white;
   margin-top: 10px;
@@ -169,12 +172,11 @@ body {
 
 .texto {
   line-height: 20px;
-  /* font-family: Poppins, Arial, sans-serif; */
   color: #000;
 }
 
 .cadastro {
-  color: #996515;
+  color: var(--fundo);
   font-weight: bolder;
   text-decoration: solid;
 }
@@ -186,4 +188,16 @@ body {
 
 .icone-social {
   fill: #fafafa;
+}
+
+/* teste esqueceu sua senha ATENÇÃO A ESTILIZAÇÃO DE COR E TAMANHO*/
+.hidden {
+  display: none;
+  font-size: 12px;
+  color: black;
+  text-decoration: solid;
+}
+.hidden a {
+  outline-width: 100px;
+  cursor: pointer;
 }

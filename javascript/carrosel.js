@@ -163,6 +163,11 @@ window.addEventListener("resize", () => {
 adjustScrollAmount_2();
 updateButtonVisibility_2();
 
+<<<<<<< HEAD
+=======
+//-------------------------------------------------------------------------
+
+>>>>>>> 9076bdd419377e69c34eeaa8a3c6e5b3ed3e647e
 var slideIndex = 0;
 var slides = document.getElementsByClassName("slide");
 var dots = document.getElementsByClassName("dot");

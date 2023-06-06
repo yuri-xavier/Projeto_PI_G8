@@ -6,7 +6,11 @@
   align-items: center;
   width: 100%;
 }
+<<<<<<< HEAD
 .pesquisa input {
+=======
+#search_bar input {
+>>>>>>> 9076bdd419377e69c34eeaa8a3c6e5b3ed3e647e
   height: 4vh;
   margin-bottom: 10px;
   border-radius: 20px;

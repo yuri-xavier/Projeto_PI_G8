@@ -27,6 +27,7 @@
     <title>Cadastre-se</title>
   </head>
   <body>
+    <div class="background-overlay"></div>
     <header id="topo">
       <nav class="navigation">
         <a href="../index.html" class="logo"
@@ -58,7 +59,11 @@
             <a href="./login.html"> <i class="bx bx-user-plus"></i></a>
           </li>
           <li>
+<<<<<<< HEAD
             <div class="search-box">
+=======
+            <div class="search-box" data-tipo-arquivo=".">
+>>>>>>> 9076bdd419377e69c34eeaa8a3c6e5b3ed3e647e
               <input
                 type="text"
                 id="pesquisa"
@@ -90,7 +95,7 @@
     <main>
       <section class="envio">
         <div class="formulario">
-          <form action="processar-cadastro.php" method="POST">
+          <form id="form" action="processar-cadastro.php" method="POST">
             <h1>Cadastre-se</h1>
             <label for="nome">Nome:</label>
             <input
@@ -113,6 +118,7 @@
               name="email"
               class="required"
               oninput="emailValidate()"
+              autocomplete="email"
             />
             <span class="span-required">Digite um email válido</span>
 
@@ -123,6 +129,7 @@
               name="senha"
               class="required"
               oninput="passwordValidate ()"
+              autocomplete="new-password"
             />
             <span class="span-required"
               >Digite uma senha com no mínimo 8 caracteres</span
@@ -131,10 +138,11 @@
             <label for="senha">Repetir senha:</label>
             <input
               type="password"
-              id="senha"
+              id="repetir-senha"
               name="senha"
               class="required"
               oninput="comparePassword ()"
+              autocomplete="new-password"
             />
             <span class="span-required">As senhas devem ser iguais</span>
 

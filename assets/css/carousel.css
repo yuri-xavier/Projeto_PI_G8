@@ -96,7 +96,10 @@
   overflow: hidden;
   cursor: pointer;
   transition: transform 0.3s;
+<<<<<<< HEAD
   z-index: -1;
+=======
+>>>>>>> 9076bdd419377e69c34eeaa8a3c6e5b3ed3e647e
 }
 
 .carrosel-container-2 i {
@@ -121,6 +124,10 @@
 .carrosel-container-2 i:first-child {
   left: 20px;
   top: 10rem;
+<<<<<<< HEAD
+=======
+  z-index: 1;
+>>>>>>> 9076bdd419377e69c34eeaa8a3c6e5b3ed3e647e
 }
 .carrosel-container-2 i:last-child {
   right: 20px;

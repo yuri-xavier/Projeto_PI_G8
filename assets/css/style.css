@@ -157,6 +157,7 @@ main h1 {
   display: flex;
   justify-content: center;
   align-items: center;
+  font-size: 30px;
 }
 main h2 {
   display: flex;
@@ -238,12 +239,20 @@ body::-webkit-scrollbar-thumb {
   padding: 0;
   width: 0;
   transition: width 0.2s;
+<<<<<<< HEAD
+=======
+  color: aliceblue;
+>>>>>>> 9076bdd419377e69c34eeaa8a3c6e5b3ed3e647e
 }
 .search-box .search-btn {
   display: flex;
   align-items: center;
   justify-content: center;
+<<<<<<< HEAD
   width: 50px;
+=======
+  width: 20px;
+>>>>>>> 9076bdd419377e69c34eeaa8a3c6e5b3ed3e647e
   height: 50px;
   border-radius: 50%;
   cursor: pointer;
