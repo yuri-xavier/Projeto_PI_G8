@@ -59,6 +59,7 @@ body {
     height: 100vh;
   }
 }
+<<<<<<< HEAD
 
 @keyframes changeBackgroundDark  {
   0% {
@@ -93,6 +94,8 @@ body {
   }
 } 
 
+=======
+>>>>>>> 9076bdd419377e69c34eeaa8a3c6e5b3ed3e647e
 .envio form {
   /* text-align: left; TESTE !!!!!!*/
   width: 20rem;
