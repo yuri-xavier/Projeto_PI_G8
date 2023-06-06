@@ -15,6 +15,7 @@ menu.addEventListener("click", () => {
 });
 
 //Dark-mode -----------------------------------------------------------------------------------------------
+
 const changeThemeBtn = document.querySelector("#change-theme");
 // Toggle dark mode
 function toggleDarkMode() {

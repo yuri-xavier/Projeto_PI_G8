@@ -163,7 +163,7 @@ window.addEventListener("resize", () => {
 adjustScrollAmount_2();
 updateButtonVisibility_2();
 
-//-------------------------------------------------------------------------
+/* Slideshow Home-----------------------------------------------------------*/
 
 var slideIndex = 0;
 var slides = document.getElementsByClassName("slide");

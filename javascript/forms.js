@@ -56,7 +56,6 @@ function passwordValidate() {
     comparePassword();
   }
 }
-
 function comparePassword() {
   if (campos[2].value == campos[3].value && campos[3].value.length >= 8) {
     removeError(3);
@@ -64,7 +63,6 @@ function comparePassword() {
     setError(3);
   }
 }
-
 function passwordValidate2() {
   if (campos[1].value.length < 8) {
     setError(1);
@@ -75,7 +73,6 @@ function passwordValidate2() {
 
 //Validação do esqueceu sua senha
 let failedAttempts = 0;
-
 document.getElementById("form").addEventListener("submit", function (e) {
   e.preventDefault(); // Impede o envio do formulário
 
