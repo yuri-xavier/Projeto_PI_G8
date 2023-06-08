@@ -165,19 +165,19 @@ updateButtonVisibility_2();
 
 /* Slideshow Home-----------------------------------------------------------*/
 
-var slideIndex = 0;
-var slides = document.getElementsByClassName("slide");
-var dots = document.getElementsByClassName("dot");
+let slideIndex = 0;
+let slides = document.getElementsByClassName("slide");
+let dots = document.getElementsByClassName("dot");
 
 function showSlide() {
-  for (var i = 0; i < slides.length; i++) {
+  for (let i = 0; i < slides.length; i++) {
     slides[i].style.display = "none";
   }
   slides[slideIndex].style.display = "block";
 }
 
 function updateDots() {
-  for (var i = 0; i < dots.length; i++) {
+  for (let i = 0; i < dots.length; i++) {
     dots[i].classList.remove("active");
   }
   dots[slideIndex].classList.add("active");
@@ -210,9 +210,9 @@ function prevSlide() {
 setInterval(nextSlide, 3000);
 
 showSlide();
-for (var i = 0; i < dots.length; i++) {
+for (let i = 0; i < dots.length; i++) {
   dots[i].addEventListener("click", function () {
-    var dotIndex = Array.prototype.indexOf.call(dots, this);
+    let dotIndex = Array.prototype.indexOf.call(dots, this);
     goToSlide(dotIndex);
   });
 }

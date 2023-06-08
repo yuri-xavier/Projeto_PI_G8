@@ -41,3 +41,16 @@
 .dot.active {
   background-color: #555;
 }
+
+.navigation-dots .dot.active:nth-child(1) {
+  background-color: rgb(4, 8, 250);
+}
+.navigation-dots .dot.active:nth-child(2) {
+  background-color: rgb(241, 238, 8);
+}
+.navigation-dots .dot.active:nth-child(3) {
+  background-color: rgb(253, 32, 3);
+}
+.navigation-dots .dot.active:nth-child(4) {
+  background-color: rgb(18, 168, 5);
+}
