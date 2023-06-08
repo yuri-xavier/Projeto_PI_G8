@@ -19,7 +19,6 @@ body {
 }
 
 /* dark theme */
-
 .dark,
 .dark header {
   background-color: #263238;
@@ -31,8 +30,21 @@ body {
 .dark .bi-moon {
   display: block;
 }
+
+/* Modo dark pagina criadores */
 .dark h3 {
   color: aliceblue;
+}
+.dark .nome-criadores,
+.dark .profissão {
+  color: aqua;
+}
+.dark .card {
+  background-color: #263238;
+  transition: 0.3s;
+}
+.dark .link i {
+  color: aqua;
 }
 
 /* Barra de navegação modo dark */

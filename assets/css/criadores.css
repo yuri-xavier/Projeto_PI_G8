@@ -12,15 +12,23 @@
 .card-wrapper {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 2.2rem;
+  gap: 1.5rem;
+}
+.card h4 {
+  font-size: 15px;
+  padding: 5px;
 }
 .card {
+  display: flex;
+  justify-content: space-around;
   background-color: var(--white);
   border-radius: 5px;
   box-shadow: 0 2px 5px var(--fundo);
   overflow: hidden;
   cursor: pointer;
   transition: transform 0.3s;
+  position: relative;
+  background-color: #dbcccc;
 }
 .card i {
   font-size: 25px;
@@ -28,7 +36,7 @@
   color: var(--dark);
 }
 .card i:hover {
-  color: #ff0202;
+  color: #d16603;
 }
 .img-cri img {
   max-width: 190px;
@@ -36,6 +44,7 @@
   height: 170px;
   object-fit: cover;
   margin-top: 5px;
+  border-radius: 50%;
 }
 .img-cri {
   display: flex;
@@ -45,7 +54,11 @@
 .link {
   display: flex;
   justify-content: center;
-  gap: 3rem;
+  gap: 2rem;
+  flex-direction: column;
+  position: absolute;
+  left: 10px;
+  top: 40px;
 }
 /* -------------------------------------------------------------------------- */
 
