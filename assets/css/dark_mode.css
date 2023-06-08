@@ -31,10 +31,11 @@ body {
 .dark .bi-moon {
   display: block;
 }
-
 .dark h3 {
   color: aliceblue;
 }
+
+/* Barra de navegação modo dark */
 .dark .navigation {
   background-color: #263238;
 }
@@ -44,14 +45,20 @@ body {
 .dark .navigation ul ul {
   background-color: #263238;
 }
+
+/* Cards receitas modo dark */
 .dark .grid-item {
   background-color: #263238;
   transition: 0.3s;
 }
+
+/* Carrossel modo dark */
 .dark .carrosel-item,
 .dark .carrosel-2-item {
   background-color: #263238;
 }
+
+/* Fundo pagina login/cadastro */
 .dark .background-overlay {
   background-color: rgba(0, 0, 0, 0.356);
   transition: 0.3s;
