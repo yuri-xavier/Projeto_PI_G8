@@ -54,12 +54,25 @@ $(document).ready(function () {
     // Armazena os itens do JSON na variável 'items'
     $("#pesquisa").autocomplete({
       // Aplica a função de autocomplete ao elemento com o ID 'pesquisa'
-      source: items.map(function (item) {
-        return item.title;
-      }),
+      source: function (request, response) {
+        // Função para filtrar os resultados e exibir apenas 7 opções
+        let filteredItems = items
+          .filter(function (item) {
+            return (
+              item.title.toLowerCase().indexOf(request.term.toLowerCase()) !==
+              -1
+            );
+          })
+          .slice(0, 5);
+        response(
+          filteredItems.map(function (item) {
+            return item.title;
+          })
+        );
+      },
       // Define a fonte de sugestões para o autocomplete como os títulos dos itens
       select: function (event, ui) {
-        var selectedItem = items.find(function (item) {
+        let selectedItem = items.find(function (item) {
           return item.title === ui.item.value;
         });
         // Quando um item é selecionado no autocomplete, encontra o item correspondente
