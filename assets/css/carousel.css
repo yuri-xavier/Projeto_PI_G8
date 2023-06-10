@@ -6,7 +6,6 @@
   position: relative;
   z-index: 1;
 }
-
 .carrosel-grid {
   display: grid;
   grid-auto-flow: column;
@@ -26,7 +25,6 @@
   cursor: pointer;
   transition: transform 0.3s;
 }
-
 .carrosel-container i {
   top: 50%;
   height: 50px;
@@ -55,7 +53,6 @@
   right: 16.5px;
   top: 11rem;
 }
-
 .carrosel-item:hover {
   transform: translateY(-5px);
 }
@@ -97,7 +94,6 @@
   cursor: pointer;
   transition: transform 0.3s;
 }
-
 .carrosel-container-2 i {
   top: 50%;
   height: 50px;
@@ -126,7 +122,6 @@
   right: 20px;
   top: 10rem;
 }
-
 .carrosel-2-item:hover {
   transform: translateY(-5px);
 }
@@ -139,6 +134,7 @@
 .carousel-2.no-transition {
   scroll-behavior: auto;
 }
+
 /* ---------------------------------------------------------------------------------------- */
 @media (max-width: 1000px) {
   .carrosel-grid {

@@ -19,7 +19,6 @@ body {
 }
 
 /* dark theme */
-
 .dark,
 .dark header {
   background-color: #263238;
@@ -32,9 +31,23 @@ body {
   display: block;
 }
 
+/* Modo dark pagina criadores */
 .dark h3 {
   color: aliceblue;
 }
+.dark .nome-criadores,
+.dark .profissão {
+  color: aqua;
+}
+.dark .card {
+  background-color: #263238;
+  transition: 0.3s;
+}
+.dark .link i {
+  color: aqua;
+}
+
+/* Barra de navegação modo dark */
 .dark .navigation {
   background-color: #263238;
 }
@@ -44,14 +57,20 @@ body {
 .dark .navigation ul ul {
   background-color: #263238;
 }
+
+/* Cards receitas modo dark */
 .dark .grid-item {
   background-color: #263238;
   transition: 0.3s;
 }
+
+/* Carrossel modo dark */
 .dark .carrosel-item,
 .dark .carrosel-2-item {
   background-color: #263238;
 }
+
+/* Fundo pagina login/cadastro */
 .dark .background-overlay {
   background-color: rgba(0, 0, 0, 0.356);
   transition: 0.3s;

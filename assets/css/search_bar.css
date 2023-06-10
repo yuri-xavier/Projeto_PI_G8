@@ -7,11 +7,11 @@
   width: 100%;
 }
 #search_bar input {
-  height: 4vh;
+  height: 3vh;
   margin-bottom: 10px;
   border-radius: 20px;
   padding: 5px;
-  width: 30%;
+  width: 25rem;
   margin-top: 30px;
   border-color: var(--hover);
 }
@@ -32,7 +32,7 @@
   justify-content: center;
 }
 /* -------------------------------------------------------------------------- */
-/* Barra de pesquisa */
+/* Barra de pesquisa paginas receitas */
 
 .search-box {
   position: relative;
@@ -47,18 +47,30 @@
   padding: 0;
   width: 0;
   transition: width 0.2s;
+  color: aliceblue;
 }
 .search-box .search-btn {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 50px;
+  width: 20px;
   height: 50px;
   border-radius: 50%;
   cursor: pointer;
 }
 .search-box:hover .search-text {
-  width: 320px;
+  width: 240px;
 }
-
 /* -------------------------------------------------------------------------- */
+
+@media (max-width: 785px) {
+  #search_bar input {
+    width: 12.5rem;
+    transition: width 0.2s;
+  }
+}
+@media (max-width: 1024px) {
+  #search_bar input {
+    transition: width 0.2s;
+  }
+}

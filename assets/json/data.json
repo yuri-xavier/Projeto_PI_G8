@@ -1,23 +1,23 @@
 {
     "items": [
         {
-            "title": "massas",
+            "title": "Massas",
             "link": "../html/receitas_massas.html"
         },{
         
-            "title": "salgados",
+            "title": "Salgados",
             "link": "../html/receitas_salgados.html"
         },{
         
-            "title": "doces",
+            "title": "Doces",
             "link": "../html/receitas_doces.html"
         },{
         
-            "title": "vegano",
-            "link": "../html/receitas_vegano.html"
+            "title": "Veganas",
+            "link": "../html/receitas_veganas.html"
         },{
 
-            "title": "drinks",
+            "title": "Drinks",
             "link": "../html/receitas_drink.html"
         },{
             "title": "Manjar dos Deuses de Maria Mole",

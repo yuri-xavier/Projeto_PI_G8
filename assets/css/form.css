@@ -60,7 +60,6 @@ body {
   }
 }
 .envio form {
-  /* text-align: left; TESTE !!!!!!*/
   width: 20rem;
   background: rgba(252, 250, 250, 0.479);
   padding: 1rem;
@@ -70,22 +69,18 @@ body {
   justify-content: center;
   width: 100vw;
 }
-
 .envio {
   text-align: center;
   margin: 10px auto;
 }
-
 .envio h1 {
   font-size: 24px;
 }
-
 .envio p {
   font-size: 16px;
   margin-bottom: 20px;
   font-weight: bold;
 }
-
 .envio label {
   display: block;
    text-align: left; /*MUDANÇA:pq tinha ficado centralizado qdo mudei o .emvio */
@@ -93,7 +88,6 @@ body {
   margin-bottom: 5px; /*MUDANÇA: diminui pq coloquei o margin-top */
   font-weight: bold;
 }
-
 .envio input,
 .envio textarea,
 .envio select {
@@ -101,7 +95,6 @@ body {
   height: 40px;
   border-radius: 15px;
 }
-
 .envio input[type="submit"] {
   display: flex;
   justify-content: center;
@@ -114,33 +107,27 @@ body {
   cursor: pointer;
   font-size: 16px;
 }
-
 .envio input[type="submit"]:hover {
   opacity: 0.8;
 }
-
 .envio .botao-gmail {
   background-color: #db4a39;
   color: white;
   gap: 1rem;
 }
-
 .envio .botao-facebook {
   background-color: #4267b2;
   color: white;
   gap: 1rem;
 }
-
 .envio .botao-github {
   background-color: #333333;
   color: white;
 }
-
 .envio .botao-linkedin {
   background-color: #0077b5;
   color: white;
 }
-
 .envio .botao-gmail,
 .envio .botao-facebook,
 .envio .botao-github,
@@ -155,43 +142,40 @@ body {
   font-size: 16px;
   cursor: pointer;
 }
-
 .envio .botao-gmail:hover,
 .envio .botao-facebook:hover,
 .envio .botao-github:hover,
 .envio .botao-linkedin:hover {
   opacity: 0.8;
 }
-
 .envio h4 {
   display: flex;
   justify-content: center;
 }
 
 /* login */
-
 .texto {
   line-height: 20px;
   /* font-family: Poppins, Arial, sans-serif; */
   color: #000;
 }
-
 .cadastro {
   color: var(--fundo);
   font-weight: bolder;
   text-decoration: solid;
 }
-
 .cadastro a {
   outline-width: 100px;
   cursor: pointer;
 }
-
 .icone-social {
   fill: #fafafa;
 }
+<<<<<<< HEAD
 
 /* teste esqueceu sua senha ATENÇÃO A ESTILIZAÇÃO DE COR E TAMANHO*/ 
+=======
+>>>>>>> 091b05b343d05f27fc914bf0e834002ceda24f16
 .hidden {
   display: none;
   font-size: 12px;
