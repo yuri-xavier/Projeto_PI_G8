@@ -2,11 +2,11 @@
     "items": [
         {
             "title": "Massas",
-            "link": ".../html/receitas_massas.html"
+            "link": ".././html/receitas_massas.html"
         },{
         
             "title": "Salgados",
-            "link": "../html/receitas_salgados.html"
+            "link": "../../html/receitas_salgados.html"
         },{
         
             "title": "Doces",
