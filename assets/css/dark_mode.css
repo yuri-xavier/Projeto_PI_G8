@@ -7,6 +7,9 @@ html,
 body {
   transition: 0.5s;
 }
+.background-overlay {
+  transition: 0.3s;
+}
 .bi {
   font-size: 1rem;
   cursor: pointer;
@@ -48,4 +51,8 @@ body {
 .dark .carrosel-item,
 .dark .carrosel-2-item {
   background-color: #263238;
+}
+.dark .background-overlay {
+  background-color: rgba(0, 0, 0, 0.356);
+  transition: 0.3s;
 }

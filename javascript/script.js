@@ -19,10 +19,6 @@ const changeThemeBtn = document.querySelector("#change-theme");
 // Toggle dark mode
 function toggleDarkMode() {
   document.body.classList.toggle("dark");
-  // TESTE mudança da @keyframes p dark mode
-  const animationName = document.body.classList.contains("dark") ? "changeBackgroundDark" : "changeBackground";
-  document.body.style.animationName = animationName;
-
 }
 // Load light or dark mode
 function loadTheme() {

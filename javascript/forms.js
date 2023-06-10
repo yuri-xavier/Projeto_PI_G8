@@ -73,6 +73,7 @@ function passwordValidate2() {
   }
 }
 
+
 //Validação do esqueceu sua senha
 let failedAttempts = 0;
 
@@ -85,7 +86,9 @@ document.getElementById('form').addEventListener('submit', function(e) {
   if (email2 === 'user@example.com' && password2 === 'senha123') {
     // Login bem-sucedido, redirecionar o usuário para a página principal, YURIII VER O CAMINHO SE TÁ CORRETO
     removeError(1);
+    removeError(0);
     window.location.href = "../index.html";
+    
   } else {
     // Aumentar o número de tentativas mal sucedidas
     failedAttempts++;
@@ -95,6 +98,7 @@ document.getElementById('form').addEventListener('submit', function(e) {
       document.getElementById('forgot-password-link').classList.remove('hidden');
     } else {
       // Exibir uma mensagem de erro genérica
+      removeError(0);
       alert('Email ou senha inválidos. Tente novamente.');
     }
   }
