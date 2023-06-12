@@ -78,10 +78,9 @@ $(document).ready(function () {
 
         let link = selectedItem.link;
         if (!link.startsWith("http")) {
-          let currentPage = window.location.pathname.split("/").pop();
-          if (currentPage !== "" && currentPage !== "index.html") {
-            link = "../" + link;
-          }
+          link = "../" + link;
+        } else {
+          link = link;
         }
         window.open(link);
       },
