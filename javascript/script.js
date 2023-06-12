@@ -77,13 +77,12 @@ $(document).ready(function () {
         });
 
         let link = selectedItem.link;
-        if (!link.startsWith("http")) {
-          link = "../" + link;
+        if (!link.startsWith("http") && !link.startsWith("./")) {
+          let currentPage = window.location.pathname.split("/").pop();
+          if (currentPage !== "index.html" || tipoArquivo !== "") {
+            link = "../" + link;
+          }
         }
-        if (window.location.pathname !== "/index.html") {
-          link = "" + link;
-        }
-
         window.open(link);
       },
     });
