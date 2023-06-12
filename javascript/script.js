@@ -55,7 +55,7 @@ $(document).ready(function () {
     $("#pesquisa").autocomplete({
       // Aplica a função de autocomplete ao elemento com o ID 'pesquisa'
       source: function (request, response) {
-        // Função para filtrar os resultados e exibir apenas 7 opções
+        // Função para filtrar os resultados e exibir apenas 5 opções
         let filteredItems = items
           .filter(function (item) {
             return (
@@ -78,7 +78,7 @@ $(document).ready(function () {
 
         let link = selectedItem.link;
         if (!link.startsWith("http")) {
-          link = window.location.href.replace(/\/[^\/]*$/, "") + "/" + link;
+          link = "../" + link;
         }
 
         window.open(link);
