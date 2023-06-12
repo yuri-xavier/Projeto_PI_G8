@@ -78,15 +78,7 @@ $(document).ready(function () {
         // Quando um item é selecionado no autocomplete, encontra o item correspondente
 
         // Abre o link do item selecionado em uma nova janela do navegador
-        var link = selectedItem.link;
-        if (link.indexOf("https://") !== 0 && link.indexOf("http://") !== 0) {
-          // Verifica se o link não começa com "https://" ou "http://"
-          if (window.location.pathname !== "/Projeto_PI_G8") {
-            link = "../" + link;
-            // Adiciona "../" ao link se não estiver na página index.html
-          }
-        }
-        window.open(link);
+        window.open(selectedItem.link);
       },
     });
   });
