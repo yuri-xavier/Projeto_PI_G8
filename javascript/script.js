@@ -78,9 +78,10 @@ $(document).ready(function () {
 
         let link = selectedItem.link;
         if (!link.startsWith("http")) {
-          if (window.location.pathname !== "/index.html") {
-            link = "../" + link;
-          }
+          link = "../" + link;
+        }
+        if (window.location.pathname !== "/index.html") {
+          link = "" + link;
         }
 
         window.open(link);
