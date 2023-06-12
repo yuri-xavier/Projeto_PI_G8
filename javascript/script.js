@@ -77,7 +77,7 @@ $(document).ready(function () {
         });
 
         let link = selectedItem.link;
-        if (!link.startsWith("http") && !link.startsWith("./")) {
+        if (!link.startsWith("http")) {
           if (window.location.pathname !== "/index.html") {
             link = "../" + link;
           }
