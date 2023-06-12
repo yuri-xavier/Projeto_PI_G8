@@ -77,9 +77,9 @@ $(document).ready(function () {
         });
 
         let link = selectedItem.link;
-        if (!link.startsWith("http") && !link.startsWith("./")) {
+        if (!link.startsWith("http")) {
           let currentPage = window.location.pathname.split("/").pop();
-          if (currentPage !== "index.html" || tipoArquivo !== "") {
+          if (currentPage !== "" && currentPage !== "index.html") {
             link = "../" + link;
           }
         }
