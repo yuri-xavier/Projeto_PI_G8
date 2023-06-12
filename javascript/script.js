@@ -53,11 +53,13 @@ $(document).ready(function () {
     var items = data.items;
     // Armazena os itens do JSON na variável 'items'
 
-    // Verifica se a página atual é diferente de "index.html" ou não possui ".html" na URL
-    if (
-      window.location.pathname !== "/index.html" &&
-      window.location.pathname.includes(".html")
-    ) {
+    // Verifica se a página atual é diferente de "index.html"
+    if (window.location.pathname.endsWith("index.html")) {
+      // Remove '../' do link de cada item
+      items.forEach(function (item) {
+        item.link = item.link.replace("../", "");
+      });
+    } else {
       // Adiciona '../' ao link de cada item
       items.forEach(function (item) {
         item.link = "../" + item.link;
