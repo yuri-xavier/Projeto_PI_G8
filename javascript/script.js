@@ -75,15 +75,13 @@ $(document).ready(function () {
         let selectedItem = items.find(function (item) {
           return item.title === ui.item.value;
         });
-
         let link = selectedItem.link;
-        if (!link.startsWith("http")) {
+        if (!link.startsWith("http") && !link.startsWith("./")) {
           let currentPage = window.location.pathname.split("/").pop();
           if (currentPage !== "" && currentPage !== "index.html") {
-            link = "../" + link;
+            link = window.location.origin + "/../" + link;
           }
         }
-
         window.open(link);
       },
     });
