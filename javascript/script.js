@@ -52,20 +52,6 @@ $(document).ready(function () {
     // Faz uma requisição GET para o arquivo JSON e obtém os dados
     var items = data.items;
     // Armazena os itens do JSON na variável 'items'
-
-    // Verifica se a página atual é diferente de "index.html"
-    if (window.location.pathname.endsWith("index.html")) {
-      // Remove '../' do link de cada item
-      items.forEach(function (item) {
-        item.link = item.link.replace("../", "");
-      });
-    } else {
-      // Adiciona '../' ao link de cada item
-      items.forEach(function (item) {
-        item.link = "../" + item.link;
-      });
-    }
-
     $("#pesquisa").autocomplete({
       // Aplica a função de autocomplete ao elemento com o ID 'pesquisa'
       source: function (request, response) {
@@ -92,7 +78,15 @@ $(document).ready(function () {
         // Quando um item é selecionado no autocomplete, encontra o item correspondente
 
         // Abre o link do item selecionado em uma nova janela do navegador
-        window.open(selectedItem.link);
+        var link = selectedItem.link;
+        if (link.indexOf("https://") !== 0 && link.indexOf("http://") !== 0) {
+          // Verifica se o link não começa com "https://" ou "http://"
+          if (window.location.pathname !== "/index.html") {
+            link = "../" + link;
+            // Adiciona "../" ao link se não estiver na página index.html
+          }
+        }
+        window.open(link);
       },
     });
   });
