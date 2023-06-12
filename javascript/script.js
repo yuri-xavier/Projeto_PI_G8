@@ -75,10 +75,16 @@ $(document).ready(function () {
         let selectedItem = items.find(function (item) {
           return item.title === ui.item.value;
         });
-        // Quando um item é selecionado no autocomplete, encontra o item correspondente
 
-        // Abre o link do item selecionado em uma nova janela do navegador
-        window.open(selectedItem.link);
+        let link = selectedItem.link;
+        if (!link.startsWith("http")) {
+          let currentPage = window.location.pathname.split("/").pop();
+          if (currentPage !== "" && currentPage !== "index.html") {
+            link = "../" + link;
+          }
+        }
+
+        window.open(link);
       },
     });
   });
