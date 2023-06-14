@@ -70,7 +70,7 @@ $(document).ready(function () {
           return item.title === ui.item.value;
         });
 
-        var linkToOpen = window.location.pathname.includes("index.html")
+        var linkToOpen = window.location.pathname.includes("/")
           ? selectedItem.link
           : selectedItem.link_2;
 
