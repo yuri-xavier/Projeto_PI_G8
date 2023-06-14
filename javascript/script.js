@@ -75,13 +75,11 @@ $(document).ready(function () {
         let selectedItem = items.find(function (item) {
           return item.title === ui.item.value;
         });
+        // Quando um item é selecionado no autocomplete, encontra o item correspondente
 
-        let linkToOpen =
-          window.location.pathname.indexOf("/html") !== -1
-            ? selectedItem.link_2
-            : selectedItem.link;
-
-        window.open(linkToOpen);
+        // Abre o link do item selecionado em uma nova janela do navegador
+        window.open(selectedItem.link);
+        window.open(selectedItem.link_2);
       },
     });
   });
