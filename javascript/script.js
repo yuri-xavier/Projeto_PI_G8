@@ -44,7 +44,8 @@ changeThemeBtn.addEventListener("change", function () {
 
 // Barra-pesquisa ---------------------------------------------------------------------------------------
 
-$(window).on("load", function () {
+$(document).ready(function () {
+  // Quando o documento estiver completamente carregado
   const arquivo = document.querySelector(".search-box");
   const tipoArquivo = arquivo.dataset.tipoArquivo || "";
   $.getJSON("." + tipoArquivo + "/assets/json/data.json", function (data) {
@@ -77,15 +78,15 @@ $(window).on("load", function () {
         // Quando um item é selecionado no autocomplete, encontra o item correspondente
 
         // Verifica se é a página index.html antes de definir o caminho do link
-        var linkPath;
+        // let linkPath;
         if (window.location.pathname.includes("index.html")) {
-          linkPath = selectedItem.link;
+          window.open(selectedItem.link);
         } else {
-          linkPath = selectedItem.link_2;
+          window.open(selectedItem.link_2);
         }
 
         // Abre o link correspondente em uma nova janela do navegador
-        window.open(linkPath);
+        // window.open(selectedItem.link);
       },
     });
   });
