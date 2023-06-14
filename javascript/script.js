@@ -71,7 +71,7 @@ $(document).ready(function () {
         });
 
         let linkToOpen =
-          window.location.pathname.indexOf("/html") !== -1
+          window.location.pathname.indexOf("/") !== -1
             ? selectedItem.link_2
             : selectedItem.link;
 
