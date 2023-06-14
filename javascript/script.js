@@ -70,11 +70,11 @@ $(document).ready(function () {
           return item.title === ui.item.value;
         });
 
-        var linkToOpen = window.location.pathname.includes("/")
-          ? selectedItem.link
-          : selectedItem.link_2;
-
-        window.open(linkToOpen);
+        if (window.location.pathname.includes("/html")) {
+          window.open(selectedItem.link_2);
+        } else {
+          window.open(selectedItem.link);
+        }
       },
     });
   });
