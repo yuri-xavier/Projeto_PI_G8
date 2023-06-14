@@ -75,7 +75,12 @@ $(document).ready(function () {
             ? selectedItem.link_2
             : selectedItem.link;
 
-        window.open(linkToOpen);
+        if (linkToOpen.startsWith("https")) {
+          window.open(linkToOpen);
+        } else {
+          console.log("Link inválido:", linkToOpen);
+          // Mantenha o comportamento padrão ou adicione sua lógica personalizada aqui
+        }
       },
     });
   });
