@@ -45,17 +45,12 @@ changeThemeBtn.addEventListener("change", function () {
 // Barra-pesquisa ---------------------------------------------------------------------------------------
 
 $(document).ready(function () {
-  // Quando o documento estiver completamente carregado
   const arquivo = document.querySelector(".search-box");
   const tipoArquivo = arquivo.dataset.tipoArquivo || "";
   $.getJSON("." + tipoArquivo + "/assets/json/data.json", function (data) {
-    // Faz uma requisição GET para o arquivo JSON e obtém os dados
     var items = data.items;
-    // Armazena os itens do JSON na variável 'items'
     $("#pesquisa").autocomplete({
-      // Aplica a função de autocomplete ao elemento com o ID 'pesquisa'
       source: function (request, response) {
-        // Função para filtrar os resultados e exibir apenas 5 opções
         let filteredItems = items
           .filter(function (item) {
             return (
@@ -70,23 +65,16 @@ $(document).ready(function () {
           })
         );
       },
-      // Define a fonte de sugestões para o autocomplete como os títulos dos itens
       select: function (event, ui) {
         let selectedItem = items.find(function (item) {
           return item.title === ui.item.value;
         });
-        // Quando um item é selecionado no autocomplete, encontra o item correspondente
 
-        // Verifica se é a página index.html antes de definir o caminho do link
-        // let linkPath;
         if (window.location.pathname.includes("index.html")) {
           window.open(selectedItem.link);
         } else {
           window.open(selectedItem.link_2);
         }
-
-        // Abre o link correspondente em uma nova janela do navegador
-        // window.open(selectedItem.link);
       },
     });
   });
