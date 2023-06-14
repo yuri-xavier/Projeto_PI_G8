@@ -59,6 +59,7 @@ $(document).ready(function () {
             );
           })
           .slice(0, 5);
+
         response(
           filteredItems.map(function (item) {
             return item.title;
@@ -70,17 +71,11 @@ $(document).ready(function () {
           return item.title === ui.item.value;
         });
 
-        let linkToOpen =
-          window.location.pathname.indexOf("/") !== -1
-            ? selectedItem.link_2
-            : selectedItem.link;
+        let linkToOpen = selectedItem.link_2
+          ? selectedItem.link_2
+          : selectedItem.link;
 
-        if (linkToOpen.startsWith("https")) {
-          window.open(linkToOpen);
-        } else {
-          console.log("Link inválido:", linkToOpen);
-          // Mantenha o comportamento padrão ou adicione sua lógica personalizada aqui
-        }
+        window.open(linkToOpen);
       },
     });
   });
