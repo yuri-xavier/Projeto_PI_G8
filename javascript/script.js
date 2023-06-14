@@ -77,15 +77,15 @@ $(document).ready(function () {
         });
         // Quando um item é selecionado no autocomplete, encontra o item correspondente
 
-        // Verifica se é a primeira página antes de abrir o link
-        if (window.location.pathname === "/") {
-          if (selectedItem.link) {
-            window.open(selectedItem.link);
-          } else {
-            window.open(selectedItem.link_2);
-          }
-        } else {
+        // Verifica se é a página de índice (index) antes de abrir o link
+        if (window.location.pathname.includes("index")) {
           window.open(selectedItem.link);
+        } else {
+          if (selectedItem.link_2) {
+            window.open(selectedItem.link_2);
+          } else {
+            window.open(selectedItem.link);
+          }
         }
       },
     });
