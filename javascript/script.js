@@ -44,8 +44,7 @@ changeThemeBtn.addEventListener("change", function () {
 
 // Barra-pesquisa ---------------------------------------------------------------------------------------
 
-$(document).ready(function () {
-  // Quando o documento estiver completamente carregado
+$(window).on("load", function () {
   const arquivo = document.querySelector(".search-box");
   const tipoArquivo = arquivo.dataset.tipoArquivo || "";
   $.getJSON("." + tipoArquivo + "/assets/json/data.json", function (data) {
