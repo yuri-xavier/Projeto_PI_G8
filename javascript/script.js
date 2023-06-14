@@ -78,7 +78,11 @@ $(document).ready(function () {
         // Quando um item é selecionado no autocomplete, encontra o item correspondente
 
         // Abre o link do item selecionado em uma nova janela do navegador
-        window.open(selectedItem.link);
+        if (selectedItem.link_2) {
+          window.open(selectedItem.link_2);
+        } else {
+          window.open(selectedItem.link);
+        }
       },
     });
   });

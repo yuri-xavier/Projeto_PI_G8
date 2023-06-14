@@ -2,23 +2,28 @@
     "items": [
         {
             "title": "Massas",
-            "link": "html/receitas_massas.html"
+            "link": "html/receitas_massas.html",
+            "link_2": "../html/receitas_massas.html"
         },{
         
             "title": "Salgados",
-            "link": "html/receitas_salgados.html"
+            "link": "html/receitas_salgados.html",
+            "link_2": "../html/receitas_salgados.html"
         },{
         
             "title": "Doces",
-            "link": "html/receitas_doces.html"
+            "link": "html/receitas_doces.html",
+            "link_2": "../html/receitas_doces.html"
         },{
         
             "title": "Veganas",
-            "link": "html/receitas_veganas.html"
+            "link": "html/receitas_veganas.html",
+            "link_2": "../html/receitas_veganas.html"
         },{
 
             "title": "Drinks",
-            "link": "html/receitas_drink.html"
+            "link": "html/receitas_drink.html",
+            "link_2": "../html/receitas_drink.html"
         },{
             "title": "Manjar dos Deuses de Maria Mole",
             "link": "https://www.soreceitasfaceis.com/doces/manjar-dos-deuses-maria-mole.html"
