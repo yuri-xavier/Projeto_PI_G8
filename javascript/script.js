@@ -79,7 +79,6 @@ $(document).ready(function () {
 
         // Abre o link do item selecionado em uma nova janela do navegador
         window.open(selectedItem.link);
-        // window.open(selectedItem.link_2);
       },
     });
   });
