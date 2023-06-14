@@ -70,7 +70,7 @@ $(document).ready(function () {
           return item.title === ui.item.value;
         });
 
-        if (window.location.pathname.includes("/")) {
+        if (window.location.pathname.includes("")) {
           window.open(selectedItem.link);
         } else {
           window.open(selectedItem.link_2);
