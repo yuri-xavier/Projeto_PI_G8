@@ -79,10 +79,10 @@ $(document).ready(function () {
 
         // Verifica se é a primeira página antes de abrir o link
         if (window.location.pathname === "/") {
-          if (selectedItem.link_2) {
-            window.open(selectedItem.link_2);
-          } else {
+          if (selectedItem.link) {
             window.open(selectedItem.link);
+          } else {
+            window.open(selectedItem.link_2);
           }
         } else {
           window.open(selectedItem.link);
