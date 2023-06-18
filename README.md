@@ -35,7 +35,7 @@ Compatível com todos os dispositivos móveis e com uma interface de usuário bo
 
 <div align="center">
 <video src="https://github.com/yuri-xavier/Projeto_PI_G8/assets/117120562/41c64463-025a-4a5d-8665-1928c11e08da"></video>
-<a href="https://yuri-xavier.github.io/Projeto_PI_G8/index.html">Entre no site </a>
+<a target="_blank" href="https://yuri-xavier.github.io/Projeto_PI_G8/index.html">Entre no site </a>
 </div>
 &nbsp;
 
