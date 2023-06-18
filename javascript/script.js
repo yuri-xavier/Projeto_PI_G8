@@ -45,15 +45,17 @@ changeThemeBtn.addEventListener("change", function () {
 // Barra-pesquisa ---------------------------------------------------------------------------------------
 
 $(document).ready(function () {
+  // Quando o documento estiver completamente carregado
   const arquivo = document.querySelector(".search-box");
   const tipoArquivo = arquivo.dataset.tipoArquivo || "";
-  const isGitHubPage = window.location.pathname !== "/";
-
   $.getJSON("." + tipoArquivo + "/assets/json/data.json", function (data) {
+    // Faz uma requisição GET para o arquivo JSON e obtém os dados
     var items = data.items;
-
+    // Armazena os itens do JSON na variável 'items'
     $("#pesquisa").autocomplete({
+      // Aplica a função de autocomplete ao elemento com o ID 'pesquisa'
       source: function (request, response) {
+        // Função para filtrar os resultados e exibir apenas 5 opções
         let filteredItems = items
           .filter(function (item) {
             return (
@@ -62,30 +64,20 @@ $(document).ready(function () {
             );
           })
           .slice(0, 5);
-
-        if (isGitHubPage) {
-          filteredItems.forEach(function (item) {
-            if (!item.link.startsWith("http")) {
-              item.link = "../" + item.link;
-            }
-          });
-        }
-
         response(
           filteredItems.map(function (item) {
             return item.title;
           })
         );
       },
+      // Define a fonte de sugestões para o autocomplete como os títulos dos itens
       select: function (event, ui) {
         let selectedItem = items.find(function (item) {
           return item.title === ui.item.value;
         });
+        // Quando um item é selecionado no autocomplete, encontra o item correspondente
 
-        if (isGitHubPage && !selectedItem.link.startsWith("http")) {
-          selectedItem.link = "../" + selectedItem.link;
-        }
-
+        // Abre o link do item selecionado em uma nova janela do navegador
         window.open(selectedItem.link);
       },
     });
