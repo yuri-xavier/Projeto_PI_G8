@@ -47,7 +47,7 @@ changeThemeBtn.addEventListener("change", function () {
 $(document).ready(function () {
   const arquivo = document.querySelector(".search-box");
   const tipoArquivo = arquivo.dataset.tipoArquivo || "";
-  const isGitHubPage = window.location.pathname !== "/"; // Verifica se não é a primeira página após o deploy no GitHub
+  const isGitHubPage = window.location.pathname !== "/";
 
   $.getJSON("." + tipoArquivo + "/assets/json/data.json", function (data) {
     var items = data.items;
@@ -63,10 +63,11 @@ $(document).ready(function () {
           })
           .slice(0, 5);
 
-        // Adiciona "../" antes do link apenas se estiver na segunda página em diante após o deploy no GitHub
         if (isGitHubPage) {
           filteredItems.forEach(function (item) {
-            item.link = "../" + item.link;
+            if (!item.link.startsWith("http")) {
+              item.link = "../" + item.link;
+            }
           });
         }
 
@@ -81,8 +82,7 @@ $(document).ready(function () {
           return item.title === ui.item.value;
         });
 
-        // Adiciona "../" antes do link apenas se estiver na segunda página em diante após o deploy no GitHub
-        if (isGitHubPage) {
+        if (isGitHubPage && !selectedItem.link.startsWith("http")) {
           selectedItem.link = "../" + selectedItem.link;
         }
 
