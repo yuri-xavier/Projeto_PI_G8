@@ -74,11 +74,18 @@ $(document).ready(function () {
       select: function (event, ui) {
         let selectedItem = items.find(function (item) {
           return item.title === ui.item.value;
-          // Quando um item é selecionado no autocomplete, encontra o item correspondente
         });
-
+        // Quando um item é selecionado no autocomplete, encontra o item correspondente
         // Abre o link do item selecionado em uma nova janela do navegador
-        window.open(selectedItem.link);
+        var link = selectedItem.link;
+        if (link.indexOf("https://") !== 0 && link.indexOf("http://") !== 0) {
+          // Verifica se o link não começa com "https://" ou "http://"
+          if (window.location.pathname !== "/index.html") {
+            link = "../" + link;
+            // Adiciona "../" ao link se não estiver na página index.html
+          }
+        }
+        window.open(link);
       },
     });
   });
