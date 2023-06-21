@@ -17,7 +17,12 @@ body {
 .bi-moon {
   display: none;
 }
-
+.formulario h1,
+.formulario label,
+.formulario h4 {
+  color: black;
+  transition: 0.3s;
+}
 /* dark theme */
 .dark,
 .dark header {
@@ -73,5 +78,12 @@ body {
 /* Fundo pagina login/cadastro */
 .dark .background-overlay {
   background-color: rgba(0, 0, 0, 0.356);
+  transition: 0.3s;
+}
+/* dark theme Formularios*/
+.dark .formulario h1,
+.dark .formulario label,
+.dark .formulario h4 {
+  color: rgb(5, 7, 53);
   transition: 0.3s;
 }
